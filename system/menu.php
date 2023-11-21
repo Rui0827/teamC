@@ -1,7 +1,9 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>システム開発</title>
-    <link rel="stylesheet" href="css/menu.css">
+<meta charset="UTF-8">
+<title>システム開発</title>
+<link rel="stylesheet" href="css/menu.css">
 </head>
 
 <body>
@@ -16,7 +18,7 @@
         </span>
 
         <span class="button">
-            <a href="login-input.php" class="example">
+            <a href="login.php" class="example">
                 <img width="70" src="image/system/rogin.png" alt="ログイン">
             </a>
             <a href="cart.php" class="example">
@@ -25,3 +27,5 @@
         </span>
     </div>
     <hr>
+
+    <?php require 'footer.php'; ?>

@@ -3,38 +3,39 @@
 <?php require 'menu.php'; ?>
 
 <body>
-<h1>ユーザー更新</h1>
-<p>新しいアカウントとパスワードを入力して下さい</p>
+    <a href="top.php">商品一覧へ戻る</a>
+    <hr>
+    <!-- 更新フォーム -->
+    アカウント名:<input type="text" name="account_name"><br>
+    パスワード:<input type="password" name="password"><br> <!-- Change input type to password for security -->
+    住所:<input type="text" name="address"><br>
+    メールアドレス:<input type="text" name="Email"><br>
+    登録日:<input type="text" name="torokubi"><br>
+    <form action="userkosinkakunin.php" method="post">
+        <button type="submit">更新</button>
+    </form>
+    <?php
+    $pdo = new PDO($connect, USER, PASS);
+    if (!empty($_POST['account_name']) && !empty($_POST['password'])) {
+        $account_name = $_POST['account_name'];
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password
+        $address = $_POST['address'];
+        $Email = $_POST['Email'];
+        $torokubi = $_POST['torokubi'];
+        $today = date("Y-m-d");
 
-<link rel="stylesheet" href="css/kosin.css">
-<?php
-$name=$address=$login=$password='';
-if (isset($_SESSION['customer'])) {
-    $name=$_SESSION['customer']['name'];
-    $address=$_SESSION['customer']['address'];
-    $login=$_SESSION['customer']['login'];
-    $password=$_SESSION['customer']['password'];
-}
-echo '<table>';
-echo '<form action="kosin-output.php" method="post">';
-echo '<tr><td>お名前</td><td>';
-echo '<input type="text" name="name" value="', $name, '">';
-echo '</td></tr>';
-echo '<tr><td>ご住所</td><td>';
-echo '<input type="text" name="address" value="', $address, '">';
-echo '</td></tr>';
-echo '<tr><td>ログイン名</td><td>'; 
-echo '<input type="text" name="login" value="', $login, '">';
-echo '</td></tr>';
-echo '<tr><td>パスワード</td><td>'; 
-echo '<input type="password" name="password" value="', $password, '">';
-echo '</td></tr>';
-echo '</table>';
-echo '<div class="touroku"><input type="submit"  value="登録"></div>';
-echo '</form>';
-echo '<div class="logout"><form action="logout.php" method="post">';
-echo '<input type="submit" value="ログアウト"></div>';
-echo '</form>';
-?>
+        $sql_update = $pdo->prepare('UPDATE Customer SET password=?, address=?, Email=?, torokubi=?,koushinbi=? WHERE account_name=?');
+        $sql_update->execute([$password, $address, $Email, $torokubi, $today, $account_name]);
+
+        // if (!empty($_POST['account_name']) || !empty($_POST['password']) || !empty($_POST['address']) || !empty($_POST['Email']) || !empty($_POST['torokubi'])) {
+        //     echo '商品情報が更新されました。';
+        // } else {
+        //     echo '商品情報の更新に失敗しました。';
+        //     print_r($sql_update->errorInfo()); // Use $sql_update instead of $pdo
+        // }
+    }
+    ?>
+
+    <a href="top.php">商品一覧へ戻る</a>
 </body>
 <?php require 'footer.php'; ?>
