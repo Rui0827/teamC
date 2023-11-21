@@ -1,0 +1,16 @@
+.kensaku{
+    display: inline-block;
+    text-align: center;
+}
+
+.button{
+    display: inline-block;
+    text-align: right;
+}
+
+.kensaku-btn{
+    background-color:#87cefa;
+    border-radius:10px;
+    border:#87cefa 5px solid;
+    padding: 5 5 10 10;
+}

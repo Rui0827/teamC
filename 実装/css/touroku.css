@@ -1,0 +1,60 @@
+  /* h1要素の背景色を青に設定 */
+  body {
+    text-align: center;
+}
+
+h1 {
+    background-color: rgb(114, 203, 255);
+    color: brack;
+    /* テキストの色を白に設定して視認性を向上させます */
+    padding: 10px;
+    /* h1の周りに余白を追加します */
+}
+
+/* フォーム要素を中央揃え */
+form {
+    text-align: center;
+}
+
+/* ボタンのサイズを大きくする */
+button {
+    width: 120px;
+    /* 幅を調整 */
+    height: 40px;
+    /* 高さを調整 */
+    background-color: rgb(112, 205, 50);
+}
+.bottom-right {
+    position: absolute;
+    bottom: 10px; /* 下からの距離を調整 */
+    right: 10px; /* 右からの距離を調整 */
+}
+
+
+/* テキストボックスのサイズを大きくする */
+input[type="text"] {
+    width: 200px;
+    /* 幅を調整 */
+    height: 30px;
+    /* 高さを調整 */
+}
+/* touroku.css */
+.bottom-left {
+    position: absolute;
+    bottom: 10px; /* 下からの距離を調整 */
+    left: 10px; /* 左からの距離を調整 */
+}
+
+.pink-button {
+    background-color: pink;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
