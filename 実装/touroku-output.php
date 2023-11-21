@@ -13,9 +13,10 @@
 
         $pdo=new PDO($connect,USER,PASS);
         $sql=$pdo->prepare('insert into Shohin values(null,?,?,?,?,?,?,now(),null)');
-        $sql->execute([$_POST['shohin_name'],$_POST['price'],'image/??',$_POST['details'],$_POST['stock'],$_POST['genre_id']]);  
+        $sql->execute([$_POST['shohin_name'],$_POST['price'],'image/products/top.jpg',$_POST['details'],$_POST['stock'],$_POST['genre_id']]);  
         $id = $pdo->lastInsertId();
-        $file='image/'.$id.'/'.basename($_FILES['photo']['name']);
+        //$file='image/products/'.$id.'/'.basename($_FILES['photo']['name']);
+        $file='image/products/'.$id.'/top.jpg';
         echo '<tr>';
         echo '<td>',$_POST['shohin_name'], '</td>';
         echo '<td>',$_POST['price'], '</td>';
@@ -24,13 +25,13 @@
         echo '</tr>';
         echo "\n";
         
-        if (!file_exists('image/'.$id)) {
-            mkdir('image/'.$id);
+        if (!file_exists('image/products/'.$id)) {
+            mkdir('image/products/'.$id);
         }
         
         if (move_uploaded_file($_FILES['photo']['tmp_name'], $file,)) {
             echo $file, 'のアップロードに成功しました';
-            echo '<p><img alt="image" src="', $file, '" width="500" height="500"></p>';
+            echo '<p><img alt="image/products" src="', $file, '" width="500" height="500"></p>';
         }else{
             echo 'アップロードに成功しました';
         }                                               
