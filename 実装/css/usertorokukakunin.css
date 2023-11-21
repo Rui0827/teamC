@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+header{
+    background-color: rgb(114, 203, 255);
+}
+
+.text-center {
+    text-align: center; /* テキストを水平方向に中央配置 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* コンテンツを垂直方向に中央配置 */
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center; /* テキストを水平方向に中央配置 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* コンテンツを垂直方向に中央配置 */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.back {
+    text-align: center; /* 戻るボタンを左寄せに配置 */
+    padding: 40px 0;
+}
+
+.back input[type="button"] {
+    background-color: pink; /* 背景色をピンクに設定 */
+    color: black; /* ボタンのテキスト色を黒に設定 */
+}
+
+.kakutei {
+    text-align: right; /* 登録ボタンを右寄せに配置 */
+    padding: 40px 0;
+}
+
+.kakutei input[type="submit"] {
+    background-color: rgb(112, 205, 50); /* ボタンの背景色をピンクに設定 */
+    color: black; /* ボタンのテキスト色を白に設定 */
+}
+
+.CustomerTable {
+    text-align: center;
+}
