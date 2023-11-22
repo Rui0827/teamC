@@ -15,24 +15,55 @@
         <button type="submit">更新</button>
     </form>
     <?php
-    $pdo = new PDO($connect, USER, PASS);
-    if (!empty($_POST['account_name']) && !empty($_POST['password'])) {
-        $account_name = $_POST['account_name'];
-        $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password
-        $address = $_POST['address'];
-        $Email = $_POST['Email'];
-        $torokubi = $_POST['torokubi'];
-        $today = date("Y-m-d");
+    if (isset($_POST['account_name'])) {
+        $pdo = new PDO('mysql:host=' . SERVER . ';dbname=' . DBNAME . ';charset=utf8', USER, PASS);
+        $sql = $pdo->prepare('SELECT * FROM Customer WHERE account_name LIKE ?');
+        $sql->execute(['%' . $_POST['account_name'] . '%']);
 
-        $sql_update = $pdo->prepare('UPDATE Customer SET password=?, address=?, Email=?, torokubi=?,koushinbi=? WHERE account_name=?');
-        $sql_update->execute([$password, $address, $Email, $torokubi, $today, $account_name]);
+        if (isset($_POST['customer_id'])) {
+            // Update the 'koshinbi' column with the current date when updating the data
+            $sql = $pdo->prepare('UPDATE Customer SET account_name = ?, password = ?, address = ?, Email = ?, torokubi = ?,koushinbi = NOW() WHERE id = ?');
+            $sql->execute([$_POST['account_name'], $_POST['password'], $_POST['address'], $_POST['Email'], $_POST['torokubi'], $_POST['koushinbi']]);
+            echo '更新しました';
+        }
+        foreach ($sql as $row) {
+            echo '<tr>';
+            echo '<form action="" method="post">';
+            echo '<td> ';
+            echo '<p>', $row['customer_id'], '<p>';
+            echo '</td> ';
 
-        // if (!empty($_POST['account_name']) || !empty($_POST['password']) || !empty($_POST['address']) || !empty($_POST['Email']) || !empty($_POST['torokubi'])) {
-        //     echo '商品情報が更新されました。';
-        // } else {
-        //     echo '商品情報の更新に失敗しました。';
-        //     print_r($sql_update->errorInfo()); // Use $sql_update instead of $pdo
-        // }
+            echo '<td> ';
+            echo '<input type="text" name="id" value="', $row['account_name'], '">';
+            echo '</td> ';
+
+            echo '<td>';
+            echo '<input type="text" name="name" value="', $row['password'], '">';
+            echo '</td> ';
+
+            echo '<td>';
+            echo '<input type="text" name="setumei" value="', $row['address'], '">';
+            echo '</td> ';
+
+            echo '<td>';
+            echo '<input type="text" name="tanka" value="', $row['Email'], '">';
+            echo '</td> ';
+
+            echo '<td>';
+            echo '<input type="text" name="pass" value="', $row['torokubi'], '">';
+            echo '</td> ';
+
+            echo '<p>', $row['koushinbi'], '<p>';
+            echo '</td> ';
+
+            echo '<td><input type="submit" value="更新"></td>';
+
+            echo '</form>';
+            echo '</tr>';
+            echo "\n";
+        }
+    } else {
+        echo "商品名を入力してください。";
     }
     ?>
 
