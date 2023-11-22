@@ -7,7 +7,7 @@
     <hr>
     <!-- 更新フォーム -->
     アカウント名:<input type="text" name="account_name"><br>
-    パスワード:<input type="password" name="password"><br> <!-- Change input type to password for security -->
+    パスワード:<input type="password" name="password"><br>
     住所:<input type="text" name="address"><br>
     メールアドレス:<input type="text" name="Email"><br>
     登録日:<input type="text" name="torokubi"><br>
