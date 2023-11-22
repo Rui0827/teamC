@@ -7,11 +7,11 @@ if (!isset($_SESSION['Shohin'])) {
     $_SESSION['Shohin']=[];
 }
 $count=0;
-if (isset($_SESSION['Shohin']['shohin_id'])) {
+if (isset($_SESSION['Shohin'][$id])) {
     $count=$_SESSION['Shohin'][$id]['count'];
 }
 $_SESSION['Shohin'][$id]=[
-    'name'=>$_POST['shohin_name'],
+    'name'=>$_POST['name'],
     'price'=>$_POST['price'],
     'count'=>$count+$_POST['count']
 ];

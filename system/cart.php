@@ -7,8 +7,8 @@ if (!empty($_SESSION['Shohin'])) {
     foreach ($_SESSION['Shohin'] as $id=>$product) {
         echo '<tr>';
         echo '<td>',$id, '</td>';
-        echo '<td><a href="detail.php?id=', $id, '">',
-             $product['shohin_name'], '</a></td>';
+        echo '<td><a href="detail.php?id=', $id, '">';
+        echo '<td>', $product['name'], '</a></td>';
         echo '<td>', $product['price'], '</td>';
         echo '<td>', $product['count'], '</td>';
         $subtotal=$product['price']*$product['count'];
@@ -24,3 +24,4 @@ if (!empty($_SESSION['Shohin'])) {
     echo 'カートに商品がありません。';
 }
 ?>
+<?php require 'footer.php'; ?>
