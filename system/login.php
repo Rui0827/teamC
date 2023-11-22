@@ -1,6 +1,8 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php';?>
-    <?php
+<link rel="stylesheet" href="css/login.css">
+
+<?php
     $msg = '';
     if(isset($_POST['send'])){
         unset($_SESSION['Customer']);
@@ -28,10 +30,11 @@
 
 <!DOCTYPE html>
 <html lang="ja">
-    <form action="login.php" method="post">
-        ログイン名<input type="text" name="login"><br>
-        パスワード<input type="password" name="password"><br>
-        <p><?= $msg ?></p>
-        <input type ="submit" name="send" value="ログイン">
-    </form>
+<form action="login.php" method="post">
+    ログイン名<input type="text" name="login"><br>
+    パスワード<input type="password" name="password"><br>
+    <p><?= $msg ?></p>
+    <input type="submit" name="send" value="ログイン">
+</form>
+
 </html>
