@@ -16,9 +16,13 @@
     }
     foreach( $sql as $row ){
         $id=$row['shohin_id'];
+        $stock=$row['stock'];
         echo '<tr>';
         echo '<td>';
         echo '<a href="detail.php?id=', $id, '">', '<img src="image/products/', $id, '/top.jpg" width="500" hight="500"></a>';
+        if($stock == 0){
+            echo '<p>SOLD OUT</p>';
+        }
         echo '</td>';
         echo '</tr>';
     }
