@@ -8,7 +8,11 @@
     echo '<table>';
     $pdo=new PDO($connect, USER, PASS );
 
-    if( isset($_POST['keyword']) ){
+    if(isset($_GET['id'])){
+        $sql=$pdo->prepare('select * from Shohin where genre_id = ?');
+        $sql->execute([$_GET['id']]);
+    }
+    else if( isset($_POST['keyword']) ){
         $sql=$pdo->prepare('select * from Shohin where shohin_name like ?');
         $sql->execute(['%'.$_POST['keyword'].'%']);
     }else{
