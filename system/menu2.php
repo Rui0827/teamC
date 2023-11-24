@@ -1,4 +1,5 @@
 <div style="text-algin:center">
+    <link rel="stylesheet" href="css/menu2.css">
     <nav>
         <ul>
             <li class=”current”><a href=”top.php”>TOP</a></li>

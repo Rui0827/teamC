@@ -12,7 +12,7 @@
     <h1>商品登録</h1>
     <form action="登録処理を行うスクリプトのURL" method="POST" enctype="multipart/form-data">
         <label for="product_name">商品名:</label>
-        <input type="text" id="product_name" name "product_name" required><br><br>
+        <input type="text" id="product_name" name="product_name" required><br><br>
 
         <label for="product_price">価格:</label>
         <input type="number" id="product_price" name="product_price" required min="0"><br><br>
