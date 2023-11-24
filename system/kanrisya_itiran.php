@@ -18,10 +18,10 @@
         
         <h1>商品一覧</h1>
         <br>
-     
         <table>
             <tr><th>商品ID</th><th>商品名</th><th>価格</th><th>商品詳細</th><th>ジャンルID</th><th>写真リンク</th><th>登録日</th><th>更新日</th></tr>
-            <?php
+            
+        <?php
     $pdo=new PDO($connect, USER, PASS);
     foreach ($pdo->query('select * from Shohin') as $row) {
         echo '<tr>';
