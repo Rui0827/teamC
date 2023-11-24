@@ -1,4 +1,4 @@
-<?php require 'db_connect.php'; ?>
+<?php require 'db-connect.php'; ?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -7,7 +7,7 @@
         <title>商品登録</title>
     </head>
     <body>
-    <button onclick="location.href='ren6-8-top'">トップへ戻る</button>
+    <button onclick="location.href='top.php'">トップへ戻る</button>
 <?php
     if (is_uploaded_file($_FILES['photo']['tmp_name'])) {
 
