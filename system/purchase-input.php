@@ -8,11 +8,9 @@
         $total=0;
 
         foreach( $_SESSION['Shohin'] as $shohin_id=>$Shohin ){
-            $name=$row['shohin_name'];
             echo '<tr>';
             echo '<td>', $shohin_id, '</td>';
-            echo '<td><a href="detail.php?id=', $shohin_id, '">',
-                 $name, '</a></td>';
+            echo '<td><a href="detail.php?id=', $shohin_id, '">', $shohin['shohin_name'], '</a></td>';
             echo '<td>', $Shohin['price'], '</td>';
             echo '<td>', $Shohin['count'], '</td>';
             $subtotal= $Shohin['price'] * $Shohin['count'];
