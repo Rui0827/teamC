@@ -6,7 +6,7 @@ $pdo = new PDO($connect, USER, PASS);
 $sql = $pdo->prepare('select * from Shohin where shohin_id=?');
 $sql->execute([$_GET['id']]);
 foreach ($sql as $row) {
-    echo '<p><img alt="image" src="image/products/', $row['shohin_id'], '/top.jpg"></p>';
+    echo '<p><img alt="image" src="image/products/', $row['shohin_id'], '/top.jpg" width="500" hight="500"></p>';
     echo '<form action="cart-insert.php" method="post">';
     echo '<p>商品番号:', $row['shohin_id'], '</p>';
     echo '<p>商品名:', $row['shohin_name'], '</p>';
