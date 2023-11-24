@@ -24,4 +24,6 @@ if (!empty($_SESSION['Shohin'])) {
 }
 
 ?>
-<a haref="purchase-input.php">購入</a>
+<form action="purchase-input.php" method="post">
+    <input type="submit" value="購入する">
+</form>
