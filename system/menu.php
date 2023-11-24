@@ -21,7 +21,7 @@
             <a href="login.php" class="example">
                 <img width="70" src="image/system/rogin.png" alt="ログイン">
             </a>
-            <a href="cart.php" class="example">
+            <a href="cart-show.php" class="example">
                 <img width="70" src="image/system/cart.png" alt="カート">
             </a>
         </span>

@@ -1,7 +1,5 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php';?>
-<link rel="stylesheet" href="css/login.css">
-
 <?php
     $msg = '';
     if(isset($_POST['send'])){
@@ -30,11 +28,25 @@
 
 <!DOCTYPE html>
 <html lang="ja">
+    <head>
+    <link rel="stylesheet" href="css/login.css">
+    </head>
+    <body>
+        
 <form action="login.php" method="post">
     ログイン名<input type="text" name="login"><br>
     パスワード<input type="password" name="password"><br>
     <p><?= $msg ?></p>
-    <input type="submit" name="send" value="ログイン">
+    <input type ="submit" name="send" value="ログイン">
 </form>
-
+    <form action="usertoroku.php" method="post">
+        <input type ="submit" name="toroku" value="新規登録">
+    </form>
+    <form action="kousin.php" method="post">
+        <input type ="submit" name="kosin" value="更新">
+    </form>
+    <form action="top.php" method="post">
+        <input type ="submit" name="modoru" value="戻る">
+    </form>
+    </body>
 </html>
