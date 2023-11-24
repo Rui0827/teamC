@@ -1,55 +1,63 @@
 <?php session_start(); ?>
-<?php require 'db-connect.php';?>
-<?php
-    $msg = '';
-    if(isset($_POST['send'])){
-        unset($_SESSION['Customer']);
-        $pdo=new PDO($connect,USER,PASS);
-        $sql=$pdo->prepare('select * from Customer where account_name=?');
-        $sql->execute([$_POST['login']]);
-        $data = $sql->fetchAll();
-        foreach ($data as $row) {
-            if(password_verify($_POST['password'],$row['password']) == true){
-            $_SESSION['Customer']=[
-                'customer_id'=>$row['customer_id'],
-                'account_name'=>$row['account_name'],
-                'password'=>$row['password'],
-                'address'=>$row['address'],
-                'Email'=>$row['Email'],];
-            }
-        }
-        if (isset($_SESSION['Customer'])) {
-            header("Location: top.php");
-        }else{
-            $msg = 'ログイン名かパスワードが違います';
-        }
-}
-?>
-
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <link rel="stylesheet" href="css/login.css">
-</head>
+<?php require 'db-connect.php'; ?>
+<?php require 'header.php'; ?>
+<?php require 'menu.php'; ?>
 
 <body>
+    <form method="post">
+        <label for="name">アカウント名：</label>
+        <input type="text" name="name">
+        <input type="submit" value="検索">
+    </form>
+    <?php
 
-    <form action="login.php" method="post">
-        ログイン名<input type="text" name="login"><br>
-        パスワード<input type="password" name="password"><br>
-        <p><?= $msg ?></p>
-        <input type="submit" name="send" value="ログイン">
-    </form>
-    <form action="usertoroku.php" method="post">
-        <input type="submit" name="toroku" value="新規登録">
-    </form>
-    <form action="kousin.php" method="post">
-        <input type="submit" name="kosin" value="更新">
-    </form>
-    <form action="top.php" method="post">
-        <input type="submit" name="modoru" value="戻る">
-    </form>
+    if (isset($_POST['name'])) {
+        $pdo = new PDO('mysql:host=' . SERVER . ';dbname=' . DBNAME . ';charset=utf8', USER, PASS);
+        $sql = $pdo->prepare('SELECT * FROM Customer WHERE account_name LIKE ?');
+        $sql->execute(['%' . $_POST['name'] . '%']);
+
+        if (isset($_POST['customer_id'])) {
+            // Update the 'koshinbi' column with the current date when updating the data
+            $sql = $pdo->prepare('UPDATE Customer SET account_name = ?, password = ?, address = ?, Email = ?, torokubi= ?,koushinbi = NOW() WHERE');
+            $sql->execute([$_POST['account_name'], $_POST['password'], $_POST['addres'], $_POST['Email'], $_POST['torokubi'], $_['koushinbi']]);
+            echo '更新しました';
+        }
+        foreach ($sql as $row) {
+            echo '<tr>';
+            echo '<form action="kosin.php" method="post">';
+            echo '<td> ';
+            echo '<input type="text" name="id" value="', $row['account_name'], '">';
+            echo '</td> ';
+
+            echo '<td>';
+            echo '<input type="text" name="name" value="', $row['password'], '">';
+            echo '</td> ';
+
+            echo '<td>';
+            echo '<input type="text" name="setumei" value="', $row['address'], '">';
+            echo '</td> ';
+
+            echo '<td>';
+            echo '<input type="text" name="tanka" value="', $row['Email'], '">';
+            echo '</td> ';
+
+            echo '<td>';
+            echo '<input type="text" name="pass" value="', $row['torokubi'], '">';
+            echo '</td> ';
+
+            echo '<td>';
+            echo '<input type="text" name="pass" value="', $row['koushinbi'], '">';
+            echo '</td> ';
+
+            echo '<td><input type="submit" value="更新"></td>';
+
+            echo '</form>';
+            echo '</tr>';
+            echo "\n";
+        }
+    } else {
+    }
+    ?>
+    <br><button onclick="location.href='top.php'">トップへ戻る</button>
 </body>
-
-</html>
+<?php require 'footer.php'; ?>
