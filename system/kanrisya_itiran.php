@@ -41,7 +41,7 @@
         <br>
         <div>
             <button onclick="location.href='kanrisya_login.php'">ログアウト</button>
-            <button onclick="location.href='.php'">登録</button>
+            <button onclick="location.href='touroku-input.php'">登録</button>
         </div>
     </body>
 </html>
