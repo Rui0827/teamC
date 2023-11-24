@@ -22,4 +22,6 @@ if (!empty($_SESSION['Shohin'])) {
 } else {
     echo 'カートに商品がありません。';
 }
+
 ?>
+<a haref="purchase-input.php">購入</a>
