@@ -11,7 +11,7 @@
     <head>
         <meta charset="UTF-8">
         <title>商品一覧画面</title>
-        <link rel="stylesheet" href="css/kanrisya_itiran.css">
+    
     </head>
         
     <body>
@@ -34,19 +34,7 @@
         echo '<td>', $row['torokubi'], '</td>';
         echo '<td>', $row['koushinbi'], '</td>';
         echo '<td>';
-
-        echo '<form action=".php" method="post">';
-        echo '<input type="hidden" name="id" value="', $row['shohin_id'], '">';
-        echo '<button type="submit">更新</button>';
-        echo '</form>';
-
-        echo '</td>';
-        echo '<td>';
-
-        echo '<form action=".php" method="post">';
-        echo '<input type="hidden" name="id" value="', $row['shohin_id'], '">';
-        echo '<button type="submit">削除</button>';
-        echo '</form>';
+        echo '<a href="kanrisya_delete.php?id=',$row['shohin_id'],'">削除</a>';
 
         echo '</td>';
         echo '</tr>';
