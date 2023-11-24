@@ -1,8 +1,5 @@
+<?php require 'db-connect.php'; ?>
 <?php
-const SERVER = 'mysql214.phy.lolipop.lan';
-const DBNAME = 'LAA1517370-shop';
-const USER = 'LAA1517370';
-const PASS = 'Pass0827';
  
 $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
 ?>
@@ -17,8 +14,8 @@ $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
 <body>
     <?php
         $pdo=new PDO($connect, USER, PASS);
-        $sql=$pdo->prepare('delete from Shohin where id=?');
-          if($sql->execute([$_GET['shohin_id']])){
+        $sql=$pdo->prepare('delete from Shohin where shohin_id=?');
+          if($sql->execute([$_GET['id']])){
                echo '削除に成功しました。';
  
           }else{
