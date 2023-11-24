@@ -43,7 +43,7 @@
     <form action="usertoroku.php" method="post">
         <input type ="submit" name="toroku" value="新規登録">
     </form>
-    <form action="kousin.php" method="post">
+    <form action="kosin.php" method="post">
         <input type ="submit" name="kosin" value="更新">
     </form>
     <form action="top.php" method="post">

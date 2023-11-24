@@ -4,7 +4,7 @@
 <?php
 $pdo = new PDO($connect, USER, PASS);
 $sql = $pdo->prepare('select * from Shohin where shohin_id=?');
-$sql->execute([$_GET['shohin_id']]);
+$sql->execute([$_GET['id']]);
 foreach ($sql as $row) {
     echo '<p><img alt="image" src="image/', $row['shohin_id'], '.jpg"></p>';
     echo '<form action="cart-insert.php" method="post">';
