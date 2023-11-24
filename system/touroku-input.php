@@ -38,7 +38,7 @@
         <button type="submit" class="bottom-right">登録</button>
     </form>
 
-    <form action=".php" method="post" class="bottom-left">
+    <form action="kanrisya_itiran.php" method="post" class="bottom-left">
         <button type="submit" name="back" value="true" class="pink-button">戻る</button>
     </form>
 </body>
