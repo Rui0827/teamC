@@ -7,7 +7,8 @@
 <?php
     echo '<table>';
     $pdo=new PDO($connect, USER, PASS );
-    $sql=$pdo->prepare('select * from Shohin where genre_id = 1');
+    $sql=$pdo->prepare('select * from Shohin where genre_id = ?');
+    $sql->execute([$_GET['id']]);
 
     foreach( $sql as $row ){
         $id=$row['shohin_id'];
