@@ -29,7 +29,8 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-    <link rel="stylesheet" href="css/login.css">
+        <title>ログイン</title>
+        <link rel="stylesheet" href="css/login.css">
     </head>
     <body>
         
