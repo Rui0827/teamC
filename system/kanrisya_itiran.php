@@ -41,6 +41,7 @@
         echo '<td>', $row['torokubi'], '</td>';
         echo '<td>', $row['koushinbi'], '</td>';
         echo '<td>';
+        echo '<a href="kanrisya_koshin.php?id=',$row['shohin_name'],'">更新</a>';
         echo '<a href="kanrisya_delete.php?id=',$row['shohin_id'],'">削除</a>';
 
         echo '</td>';
