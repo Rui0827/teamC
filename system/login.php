@@ -34,7 +34,8 @@
     </head>
     <body>
         
-<form action="login.php" method="post">
+<form action="login.php" method="post" name="a" >
+    <h1>ログイン</h1>
     ログイン名<input type="text" name="login"><br>
     パスワード<input type="password" name="password"><br>
     <p><?= $msg ?></p>
