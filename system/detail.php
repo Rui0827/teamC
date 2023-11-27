@@ -21,6 +21,5 @@ foreach ($sql as $row) {
     echo '<input type="hidden" name="price" value="', $row['price'], '">';
     echo '<p><input type="submit" value="カートに追加"></p>';
     echo '</form>';
-    echo '<p><a href="favorite-insert.php?id=', $row['shohin_id'], '">お気に入りに追加</a></p>';
 }
 ?>
