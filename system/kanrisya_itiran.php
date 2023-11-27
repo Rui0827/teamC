@@ -4,19 +4,30 @@
 ?>
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>商品一覧画面</title>
-    
-    </head>
-        
-    <body>
-        
-        <h1>商品一覧</h1>
-        <br>
-        <table>
-            <tr><th>商品ID</th><th>商品名</th><th>価格</th><th>商品詳細</th><th>ジャンルID</th><th>写真リンク</th><th>登録日</th><th>更新日</th></tr>
-            
+
+<head>
+    <meta charset="UTF-8">
+    <title>商品一覧画面</title>
+    <link rel="stylesheet" href="css/kanrisya_itiran.css">
+</head>
+
+<body>
+
+    <h1>商品一覧</h1>
+    <br>
+    <table>
+        <tr>
+            <th>商品ID</th>
+            <th>商品名</th>
+            <th>価格</th>
+            <th>商品詳細</th>
+            <th>ジャンルID</th>
+            <th>写真リンク</th>
+            <th>登録日</th>
+            <th>更新日</th>
+            <th>処理</th>
+        </tr>
+
         <?php
     $pdo=new PDO($connect, USER, PASS);
     foreach ($pdo->query('select * from Shohin') as $row) {
@@ -37,11 +48,12 @@
         echo "\n";
     }
 ?>
-        </table>
-        <br>
-        <div>
-            <button onclick="location.href='kanrisya_login.php'">ログアウト</button>
-            <button onclick="location.href='touroku-input.php'">登録</button>
-        </div>
-    </body>
+    </table>
+    <br>
+    <div>
+        <button onclick="location.href='kanrisya_login.php'">ログアウト</button>
+        <button onclick="location.href='touroku-input.php'">登録</button>
+    </div>
+</body>
+
 </html>
