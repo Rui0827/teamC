@@ -25,7 +25,4 @@ echo '</form>';
 echo '<form action="kosin-input.php" method="post">';
 echo '<input type="submit" value="戻る">';
 echo '</form>';
-echo '<form action="logout.php" method="post">';
-echo '<input type="submit" value="ログアウト">';
-echo '</form>';
 ?>

@@ -1,6 +1,9 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
 
+<link rel="stylesheet" href="css/detail.css">
+
+
 <?php
 $pdo = new PDO($connect, USER, PASS);
 $sql = $pdo->prepare('select * from Shohin where shohin_id=?');
@@ -21,6 +24,5 @@ foreach ($sql as $row) {
     echo '<input type="hidden" name="price" value="', $row['price'], '">';
     echo '<p><input type="submit" value="カートに追加"></p>';
     echo '</form>';
-    echo '<p><a href="favorite-insert.php?id=', $row['shohin_id'], '">お気に入りに追加</a></p>';
 }
 ?>

@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>システム開発</title>
 <link rel="stylesheet" href="css/menu.css">
-</head>
 
 <body>
     <div style="display: inline-block;">

@@ -34,7 +34,8 @@
     </head>
     <body>
         
-<form action="login.php" method="post">
+<form action="login.php" method="post" name="a" >
+    <h1>ログイン</h1>
     ログイン名<input type="text" name="login"><br>
     パスワード<input type="password" name="password"><br>
     <p><?= $msg ?></p>
@@ -43,11 +44,14 @@
     <form action="usertoroku.php" method="post">
         <input type ="submit" name="toroku" value="新規登録">
     </form>
-    <form action="kosin.php" method="post">
+    <form action="kosin-input.php" method="post">
         <input type ="submit" name="kosin" value="更新">
     </form>
     <form action="top.php" method="post">
         <input type ="submit" name="modoru" value="戻る">
+    </form>
+    <form action="logout.php" method="post">
+        <input type ="submit" name="logout" value="ログアウト">
     </form>
     </body>
 </html>

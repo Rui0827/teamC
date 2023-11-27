@@ -19,6 +19,7 @@
             $total += $subtotal;
             echo '<td>', $total, '</td>';
             echo '</tr>';
+            echo '<br>';
         }
         
         echo '<br>';
@@ -33,11 +34,11 @@
     <br>
     <br>
     <form action="cart.php" style="display: inline-block;">
-        <input type="submit" value="戻る">
+        <input type="submit" class="back" value="戻る">
     </form>
 
     <form action="purchase-output.php" style="display: inline-block;">
-        <input type="submit" value="注文を確定する">
+        <input type="submit" class="decision" value="注文を確定する">
     </form>
 
 <?php require 'footer.php'; ?>
