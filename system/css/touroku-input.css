@@ -1,0 +1,62 @@
+/* スタイルの追加 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.pink-button {
+    background-color: #e74c3c;
+}
+
+/* フォーム内の配置を調整するクラス */
+.bottom-right {
+    float: right;
+}
+
+.bottom-left {
+    float: left;
+    margin-right: 10px;
+}
