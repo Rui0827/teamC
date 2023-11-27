@@ -28,3 +28,6 @@ if (empty($sql->fetchAll())) {
     echo 'ログイン名が他の人と被っています、他のログイン名に変えてください。';
 }
 ?>
+<form action="top.php" method="post">
+    <input type ="submit" name="modoru" value="トップへ戻る">
+</form>
