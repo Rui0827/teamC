@@ -22,10 +22,10 @@ echo '</td></tr>';
 echo '</table>';
 echo '<input type="submit" value="登録">';
 echo '</form>';
-echo '<form action="kosin-output.php" method="post">';
+echo '<form action="kosin-input.php" method="post">';
 echo '<input type="submit" value="戻る">';
 echo '</form>';
-echo '<form action="top.php" method="post">';
+echo '<form action="logout.php" method="post">';
 echo '<input type="submit" value="ログアウト">';
 echo '</form>';
 ?>
