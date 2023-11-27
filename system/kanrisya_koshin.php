@@ -2,21 +2,23 @@
 <?php
 $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
 ?>
- 
+
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <title>商品更新</title>
+    <link rel="stylesheet" href="css/kanrisya_koshin.css">
 </head>
- 
+
 <body>
     <h1>商品更新</h1>
     <hr>
     <form action="" method="post">
         更新する商品名:<input type="text" name="shohin_name_update"><br>
         更新する商品価格:<input type="text" name="price_update"><br>
-        更新する商品画像パス:<input type="text" name="photo_update"><br> 
+        更新する商品画像パス:<input type="text" name="photo_update"><br>
         更新するジャンル:<select id="product_category" name="product_category" required>
             <option value="" disabled selected>ジャンルを選択してください</option>
             <option value="dog">犬用品</option>
@@ -57,7 +59,7 @@ $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
             <th>ジャンル</th>
             <th>商品詳細</th>
         </tr>
- 
+
         <?php
         $pdo = new PDO($connect, USER, PASS);
         foreach ($pdo->query('SELECT * FROM Shohin') as $row) {
@@ -79,5 +81,5 @@ $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
     </table>
     <a href="itiran.php">商品一覧へ戻る</a>
 </body>
- 
+
 </html>
