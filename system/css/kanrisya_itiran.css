@@ -50,6 +50,6 @@ button.register {
     background-color: #27ae60; /* 登録ボタンの色 */
 }
 
-button.delete {
+a.delete {
     background-color: #e74c3c; /* 削除ボタンの色 */
 }
