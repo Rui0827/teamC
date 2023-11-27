@@ -52,6 +52,12 @@ a {
 .logout input[type="submit"] {
     background-color: #e74c3c; /* ログアウトボタンの色 */
     border-radius:5px;
+    text-decoration: none;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    cursor:pointer;
+    color: white;
 }
 
 .register{
@@ -62,6 +68,12 @@ a {
 .register input[type="submit"] {
     background-color: #27ae60; /* 登録ボタンの色 */
     border-radius:5px;
+    text-decoration: none;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    cursor:pointer;
+    color: white;
 }
 
 a{
