@@ -36,26 +36,57 @@ a {
 }
 /* kanrisya_itiran.css */
 
-button {
-    background-color: #3498db;
-    text-align:center;
-    color: white;
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+.rui {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
 }
 
-button.logout {
+.logout{
+    text-align: center;
+    
+}
+
+.logout input[type="submit"] {
     background-color: #e74c3c; /* ログアウトボタンの色 */
+    border-radius:5px;
+    text-decoration: none;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    cursor:pointer;
+    color: white;
 }
 
-button.register {
+.register{
+    text-align: center;
+    
+}
+
+.register input[type="submit"] {
     background-color: #27ae60; /* 登録ボタンの色 */
+    border-radius:5px;
+    text-decoration: none;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    cursor:pointer;
+    color: white;
 }
 
-a{
+.update{
+    background-color: #27ae60; /* 削除ボタンの色 */
+    border-radius:5px;
+
+}
+
+
+
+
+
+.delete{
     background-color: #e74c3c; /* 削除ボタンの色 */
     border-radius:5px;
 

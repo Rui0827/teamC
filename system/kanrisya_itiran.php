@@ -41,7 +41,8 @@
         echo '<td>', $row['torokubi'], '</td>';
         echo '<td>', $row['koushinbi'], '</td>';
         echo '<td>';
-        echo '<a href="kanrisya_delete.php?id=',$row['shohin_id'],'">削除</a>';
+        echo '<a href="kanrisya_koshin.php?id=',$row['shohin_name'],'"class="update">更新</a>';
+        echo '<a href="kanrisya_delete.php?id=',$row['shohin_id'],'"class="delete">削除</a>';
 
         echo '</td>';
         echo '</tr>';
@@ -50,9 +51,19 @@
 ?>
     </table>
     <br>
-    <div>
-        <button onclick="location.href='kanrisya_login.php'">ログアウト</button>
-        <button onclick="location.href='touroku-input.php'">登録</button>
+
+    <div class="rui">
+        <form action="kanrisya_login.php" method="post">
+            <div class="logout">
+                <input type="submit" value="ログアウト">
+            </div>
+        </form>
+
+        <form action="touroku-input.php" method="post">
+            <div class="register">
+                <input type="submit" value="登録">
+            </div>
+        </form>
     </div>
 </body>
 
