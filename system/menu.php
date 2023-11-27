@@ -8,7 +8,7 @@
 
 <body>
     <div style="display: inline-block;">
-        <a href="login.php" class="example">
+        <a href="top.php" class="example">
             <img src="image/system/rogo.png" alt="image" width="100">
         </a>
 
@@ -30,4 +30,3 @@
     </div>
     <hr>
 
-    <?php require 'footer.php'; ?>
