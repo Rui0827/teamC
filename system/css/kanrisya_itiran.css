@@ -46,7 +46,7 @@ a {
 
 .logout{
     text-align: center;
-    padding: 40px 0;
+    
 }
 
 .logout input[type="submit"] {
@@ -56,7 +56,7 @@ a {
 
 .register{
     text-align: center;
-    padding: 40px 0;
+    
 }
 
 .register input[type="submit"] {
