@@ -28,6 +28,10 @@ tr:nth-child(even) {
 }
 a {
     text-decoration: none;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    cursor:pointer;
     color: white;
 }
 /* kanrisya_itiran.css */
@@ -53,5 +57,5 @@ button.register {
 a{
     background-color: #e74c3c; /* 削除ボタンの色 */
     border-radius:5px;
-    
+
 }
