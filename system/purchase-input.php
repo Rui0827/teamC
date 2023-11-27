@@ -1,6 +1,8 @@
 <?php session_start(); ?>
 <?php require 'header.php'; ?>
 
+<link rel="stylesheet" href="css/purchase.css">
+
 <?php
     if( !empty($_SESSION['Shohin']) ){
         echo '<table>';
