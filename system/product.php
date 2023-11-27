@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php require 'header.php'; ?>
 <?php require 'menu.php'; ?>
 <?php require 'menu2.php'; ?>
 <?php require 'db-connect.php'; ?>

@@ -1,6 +1,9 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
 
+<link rel="stylesheet" href="css/detail.css">
+
+
 <?php
 $pdo = new PDO($connect, USER, PASS);
 $sql = $pdo->prepare('select * from Shohin where shohin_id=?');
