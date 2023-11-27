@@ -53,11 +53,16 @@ $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
     <hr>
     <table>
         <tr>
+            <th>商品ID</th>
             <th>商品名</th>
             <th>価格</th>
-            <th>商品画像パス</th>
-            <th>ジャンル</th>
+            <th>写真リンク</th>
+            <th>ストック</th>
             <th>商品詳細</th>
+            <th>ジャンルID</th>
+            <th>登録日</th>
+            <th>更新日</th>
+
         </tr>
 
         <?php
