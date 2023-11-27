@@ -50,9 +50,19 @@
 ?>
     </table>
     <br>
-    <div>
-        <button onclick="location.href='kanrisya_login.php'">ログアウト</button>
-        <button onclick="location.href='touroku-input.php'">登録</button>
+
+    <div class="rui">
+        <form action="kanrisya_login.php" method="post">
+            <div class="logout">
+                <input type="submit" value="ログアウト">
+            </div>
+        </form>
+
+        <form action="touroku-input.php" method="post">
+            <div class="register">
+                <input type="submit" value="登録">
+            </div>
+        </form>
     </div>
 </body>
 
