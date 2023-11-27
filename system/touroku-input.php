@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>商品登録</title>
+    <link rel="stylesheet" href="css/touroku-input.css">
 </head>
+
 <body>
     <h1>商品登録</h1>
     <form action="touroku-output.php" method="post" enctype="multipart/form-data">
@@ -42,4 +45,5 @@
         <button type="submit" name="back" value="true" class="pink-button">戻る</button>
     </form>
 </body>
+
 </html>
