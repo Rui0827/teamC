@@ -43,11 +43,14 @@
     <form action="usertoroku.php" method="post">
         <input type ="submit" name="toroku" value="新規登録">
     </form>
-    <form action="kosin.php" method="post">
+    <form action="kosin-input.php" method="post">
         <input type ="submit" name="kosin" value="更新">
     </form>
     <form action="top.php" method="post">
         <input type ="submit" name="modoru" value="戻る">
+    </form>
+    <form action="logout.php" method="post">
+        <input type ="submit" name="logout" value="ログアウト">
     </form>
     </body>
 </html>

@@ -29,5 +29,5 @@ if (empty($sql->fetchAll())) {
 }
 ?>
 <form action="top.php" method="post">
-    <input type ="submit" name="modoru" value="トップへ戻る">
+    <input type ="submit" name="top" value="トップへ戻る">
 </form>
