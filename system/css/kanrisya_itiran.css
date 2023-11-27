@@ -76,7 +76,17 @@ a {
     color: white;
 }
 
-a{
+.update{
+    background-color: #27ae60; /* 削除ボタンの色 */
+    border-radius:5px;
+
+}
+
+
+
+
+
+.delete{
     background-color: #e74c3c; /* 削除ボタンの色 */
     border-radius:5px;
 
