@@ -1,14 +1,50 @@
-h1{
-    text-align:center;
-}
+/* kanrisya_koshin.css */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 20px;
 }
+
 h1 {
+    text-align: center;
     color: #333;
 }
+
+hr {
+    border: 1px solid #ddd;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -20,75 +56,24 @@ th, td {
     padding: 8px;
     text-align: center;
 }
+
 th {
     background-color: #4CAF50;
     color: white;
 }
+
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+
 a {
-    text-decoration: none;
-    padding:10px;
-    margin-top:10px;
-    border:none;
-    cursor:pointer;
-    color: white;
-}
-/* kanrisya_itiran.css */
-
-.rui {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-}
-
-.logout{
+    display: block;
+    margin-top: 20px;
     text-align: center;
-    
-}
-
-.logout input[type="submit"] {
-    background-color: #e74c3c; /* ログアウトボタンの色 */
-    border-radius:5px;
+    color: #3498db;
     text-decoration: none;
-    padding:10px;
-    margin-top:10px;
-    border:none;
-    cursor:pointer;
-    color: white;
 }
 
-.register{
-    text-align: center;
-    
-}
-
-.register input[type="submit"] {
-    background-color: #27ae60; /* 登録ボタンの色 */
-    border-radius:5px;
-    text-decoration: none;
-    padding:10px;
-    margin-top:10px;
-    border:none;
-    cursor:pointer;
-    color: white;
-}
-
-.update{
-    background-color: #27ae60; /* 削除ボタンの色 */
-    border-radius:5px;
-
-}
-
-
-
-
-
-.delete{
-    background-color: #e74c3c; /* 削除ボタンの色 */
-    border-radius:5px;
-
+a:hover {
+    color: #2980b9;
 }
