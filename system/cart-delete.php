@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php $css = 'cart-dilete.css'; ?>
 <?php require 'header.php'; ?>
 <?php require 'menu.php'; ?>
 <?php

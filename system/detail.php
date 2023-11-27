@@ -1,8 +1,7 @@
 <?php session_start(); ?>
+<?php $css = 'detail.css'; ?>
+<?php require 'header.php'; ?>
 <?php require 'db-connect.php'; ?>
-
-<link rel="stylesheet" href="css/detail.css">
-
 
 <?php
 $pdo = new PDO($connect, USER, PASS);

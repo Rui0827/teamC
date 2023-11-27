@@ -1,6 +1,4 @@
-<link rel="stylesheet" href="css/menu.css">
 
-<body>
     <div style="display: inline-block;">
         <a href="top.php" class="example">
             <img src="image/system/rogo.png" alt="image" width="100">

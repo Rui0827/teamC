@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php $css = 'product.css'; ?>
 <?php require 'header.php'; ?>
 <?php require 'menu.php'; ?>
 <?php require 'menu2.php'; ?>
