@@ -30,6 +30,8 @@ a {
     text-decoration: none;
     color: #3498db;
 }
+/* kanrisya_itiran.css */
+
 button {
     background-color: #3498db;
     color: white;
@@ -37,4 +39,17 @@ button {
     margin-top: 10px;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+}
+
+button.logout {
+    background-color: #e74c3c; /* ログアウトボタンの色 */
+}
+
+button.register {
+    background-color: #27ae60; /* 登録ボタンの色 */
+}
+
+button.delete {
+    background-color: #e74c3c; /* 削除ボタンの色 */
 }
