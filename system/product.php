@@ -3,10 +3,6 @@
 <?php require 'menu2.php'; ?>
 <?php require 'db-connect.php'; ?>
 
-
-<link rel="stylesheet" href="css/product.css">
-
-
 <?php
     echo '<table>';
     $pdo=new PDO($connect, USER, PASS );
