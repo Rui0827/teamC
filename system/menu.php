@@ -8,7 +8,9 @@
 
 <body>
     <div style="display: inline-block;">
-        <img src="image/system/rogo.png" alt="image" width="100">
+        <a href="top.php" class="example">
+            <img src="image/system/rogo.png" alt="image" width="100">
+        </a>
 
         <span class="kensaku">
             <form action="product.php" method="post">
@@ -28,4 +30,3 @@
     </div>
     <hr>
 
-    <?php require 'footer.php'; ?>
