@@ -1,6 +1,5 @@
 <?php session_start(); ?>
-<?php require 'db-connect'; ?>
-
+<?php require 'db-connect.php'; ?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -22,7 +21,7 @@
         if (isset($_SESSION['Customer'])) {
             $id = $_SESSION['Customer']['customer_id'];
             $sql = $pdo->prepare('select * from Customer where customer_id!=? and password=?');
-            $sql->execute([$id, $_POST['login']]);
+            $sql->execute([$id, $_POST['account_name']]);
         } else {
             $sql = $pdo->prepare('select * from Customer where customer_id=?');
             $sql->execute([$_POST['account_name']]);
@@ -40,7 +39,7 @@
                     $id
                 ]);
                 $_SESSION['Customer'] = [
-                    'customer_id' => $customer_id,
+                    'customer_id' => $id,
                     'account_name' => $_POST['account_name'],
                     'address' => $_POST['address'],
                     'Email' => $_POST['Email'],
@@ -70,11 +69,10 @@
         }
         ?>
         </p>
-
         <div class="wrapper">
             <div class="back">
                 <form action="usertoroku.php" method="post">
-                    <input type="button" id="Button" value="戻る">
+                    <input type="submit" value="戻る">
                 </form>
             </div>
 
