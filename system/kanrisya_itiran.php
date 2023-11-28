@@ -23,6 +23,7 @@
             <th>商品詳細</th>
             <th>ジャンルID</th>
             <th>写真リンク</th>
+            <th>ストック</th>
             <th>登録日</th>
             <th>更新日</th>
             <th>処理</th>
@@ -38,6 +39,7 @@
         echo '<td>', $row['details'], '</td>';
         echo '<td>', $row['genre_id'], '</td>';
         echo '<td>', $row['photo'], '</td>';
+        echo '<td>', $row['stock'], '</td>'; 
         echo '<td>', $row['torokubi'], '</td>';
         echo '<td>', $row['koushinbi'], '</td>';
         echo '<td>';
