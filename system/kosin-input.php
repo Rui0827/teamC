@@ -1,28 +1,58 @@
 <?php session_start(); ?>
 
 <?php
-$name=$address=$Email='';
+$name = $address = $Email = '';
 if (isset($_SESSION['Customer'])) {
-    $name=$_SESSION['Customer']['account_name'];
-    $address=$_SESSION['Customer']['address'];
-    $Email=$_SESSION['Customer']['Email'];
+    $name = $_SESSION['Customer']['account_name'];
+    $address = $_SESSION['Customer']['address'];
+    $Email = $_SESSION['Customer']['Email'];
 }
-echo '<p>更新する情報を入力して下さい</p>';
-echo '<form action="kosin-output.php" method="post">';
-echo '<table>';
-echo '<tr><td>お名前</td><td>';
-echo '<input type="text" name="name" value="', $name, '">';
-echo '</td></tr>';
-echo '<tr><td>住所</td><td>'; 
-echo '<input type="text" name="address" value="', $address, '">';
-echo '</td></tr>';
-echo '<tr><td>Eメール</td><td>'; 
-echo '<input type="text" name="Email" value="', $Email, '">';
-echo '</td></tr>';
-echo '</table>';
-echo '<input type="submit" value="登録">';
-echo '</form>';
-echo '<form action="kosin-input.php" method="post">';
-echo '<input type="submit" value="戻る">';
-echo '</form>';
 ?>
+<h1>更新する情報を入力して下さい</h1>
+<form action="kosin-output.php" method="post">
+    <div class="nyuryoku">
+        <table>
+            <div class="name">
+                <tr>
+                    <td>お名前</td>
+                    <td><input type="text" name="name" value="<?= $name ?>"></td>
+                </tr>
+            </div>
+            <div class="address">
+                <tr>
+                    <td>住所</td>
+                    <td>
+                        <input type="text" name="address" value="<?= $address ?>">
+                    </td>
+                </tr>
+            </div>
+            <div class="email">
+                <tr>
+                    <td>Eメール</td>
+                    <td>
+                        <input type=" text" name="Email" value="<?= $Email ?>">
+                    </td>
+                </tr>
+            </div>
+        </table>
+        </br>
+    </div>
+    <div class="botan">
+        <div class="touroku">
+            <input type="submit" value="登録">
+        </div>
+</form>
+<div class="modoru">
+    <form action="kosin-input.php" method="post">
+        <input type="submit" value="戻る">
+    </form>
+</div>
+<div class="out">
+    <form action="logout.php" method="post">
+        <input type="submit" value="ログアウト">
+    </form>
+</div>
+</div>
+<style>
+    <?php include "css/kosin.css" ?>
+</style>
