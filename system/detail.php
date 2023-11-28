@@ -1,6 +1,7 @@
 <?php session_start(); ?>
-<?php $css = 'detail.css'; ?>
 <?php require 'header.php'; ?>
+<?php require 'menu.php'; ?>
+<?php $css = 'detail.css'; ?>
 <?php require 'db-connect.php'; ?>
 <link rel="stylesheet" href="css/detail.css">
 
@@ -28,7 +29,9 @@
         echo '<input type="hidden" name="price" value="', $row['price'], '">';
         echo '<input class="add-to-cart" type="submit" value="カートに追加">';
         echo '</form>';
-        echo '<p><a href="#" class="favorite-link">お気に入りに追加</a></p>';
+        echo '<form action="top.php" method="post">';
+        echo '<input type="submit" value="戻る">';
+        echo '</form>';
         echo '</div>'; 
 
         echo '</div>'; 
