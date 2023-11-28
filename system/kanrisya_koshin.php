@@ -3,7 +3,7 @@
 $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
 $pdo = new PDO($connect, USER, PASS);
 $sql = $pdo->prepare('select * from WHERE shohin_id=?'); // ここを更新しました
-$sql->execute([$_GET['id']])// ここを更新しました
+$sql->execute([$_GET['id']]);// ここを更新しました
 $row = $sql->fetch();
 ?>
 
