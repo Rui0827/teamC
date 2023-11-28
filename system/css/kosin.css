@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+h1 {
+    text-align: center;
+    font-size: 27px;
+    background-color: rgb(114, 203, 255);
+}
+
+
+
+.botan{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.touroku input[type="submit"]{
+    background-color: #27ae60; /* 登録ボタンの色 */
+    border-radius:5px;
+    text-decoration: none;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    cursor:pointer;
+    color: white;
+}
+
+.modoru input[type="submit"]{
+    background-color: #27ae60; /* 登録ボタンの色 */
+    border-radius:5px;
+    text-decoration: none;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    cursor:pointer;
+    color: white;
+}
+
+.out input[type="submit"]{
+    background-color: red; /* 登録ボタンの色 */
+    border-radius:5px;
+    text-decoration: none;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    cursor:pointer;
+    color: white;
+}
+
+
+
+table {
+    margin: auto;
+}
