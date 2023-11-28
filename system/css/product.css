@@ -1,3 +1,4 @@
-tr td {
-    display: inline-block;
+td.example {
+    white-space: nowrap;
 }
+    

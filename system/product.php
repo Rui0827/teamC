@@ -34,5 +34,9 @@
     echo '</table>';
 
 ?>
+<br>
+<form action="top.php">
+    <input type="submit" value="戻る">
+</form>
 
 <?php require 'footer.php'; ?>
