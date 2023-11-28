@@ -9,6 +9,7 @@ $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
 <head>
     <meta charset="UTF-8">
     <title>管理者削除</title>
+    <link rel="stylesheet" href="css/kanrisya_delete.css">
 </head>
 
 <body>
