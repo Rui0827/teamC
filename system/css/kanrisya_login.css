@@ -1,0 +1,60 @@
+  /* h1要素の背景色を青に設定 */
+  body {
+    text-align: center;
+}
+
+h1 {
+    background-color: rgb(114, 203, 255);
+    color: brack;
+    /* テキストの色を白に設定して視認性を向上させます */
+    padding: 10px;
+    /* h1の周りに余白を追加します */
+}
+
+/* フォーム要素を中央揃え */
+form {
+    text-align: center;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #7bed9f;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+p {
+    color: #e74c3c; /* エラーメッセージの色 */
+    margin-top: 10px;
+    margin-bottom: 0;
+}

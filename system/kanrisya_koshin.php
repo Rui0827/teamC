@@ -84,7 +84,7 @@ $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
         }
         ?>
     </table>
-    <a href="itiran.php">商品一覧へ戻る</a>
+    <a href="kanrisya_itiran.php">商品一覧へ戻る</a>
 </body>
 
 </html>
