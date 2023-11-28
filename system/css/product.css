@@ -2,6 +2,6 @@ a{
     display: inline-block;  
 }
 
-img{
-    border: 1px solid #c0c0c0;
+tr{
+    white-space: nowrap;
 }
