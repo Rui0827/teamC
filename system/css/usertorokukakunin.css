@@ -35,7 +35,7 @@ p {
     padding: 40px 0;
 }
 
-.back input[type="button"] {
+.back input[type="submit"] {
     background-color: pink; /* 背景色をピンクに設定 */
     color: black; /* ボタンのテキスト色を黒に設定 */
 }
