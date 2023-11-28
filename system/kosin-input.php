@@ -1,11 +1,14 @@
 <?php session_start(); ?>
 
 <?php
+$msg = '';
 $name = $address = $Email = '';
 if (isset($_SESSION['Customer'])) {
     $name = $_SESSION['Customer']['account_name'];
     $address = $_SESSION['Customer']['address'];
     $Email = $_SESSION['Customer']['Email'];
+}else{
+    $msg = 'ログインしてから更新してください。';
 }
 ?>
 <h1>更新する情報を入力して下さい</h1>
@@ -37,13 +40,14 @@ if (isset($_SESSION['Customer'])) {
         </table>
         </br>
     </div>
+    <p><?= $msg ?></p>
     <div class="botan">
         <div class="touroku">
             <input type="submit" value="登録">
         </div>
 </form>
 <div class="modoru">
-    <form action="kosin-input.php" method="post">
+    <form action="login.php" method="post">
         <input type="submit" value="戻る">
     </form>
 </div>
