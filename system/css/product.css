@@ -1,7 +1,3 @@
-a{
-    display: inline-block;  
-}
-
-tr{
-    white-space: nowrap;
+tr td {
+    display: inline-block;
 }
