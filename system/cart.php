@@ -19,11 +19,16 @@ if (!empty($_SESSION['Shohin'])) {
     echo '<tr><td>合計</td><td></td><td></td><td></td><td>', $total,
          '</td><td></td></tr>';
     echo '</table>';
+    echo '<form action="purchase-input.php" method="post">';
+    echo '<input type="submit" value="購入する">';
+    echo '</form>';
+
 } else {
     echo 'カートに商品がありません。';
+    echo '<form action="top.php" method="post">';
+    echo '<input type="submit" value="戻る">';
+    echo '</form>';
+    
 }
 
 ?>
-<form action="purchase-input.php" method="post">
-    <input type="submit" value="購入する">
-</form>
