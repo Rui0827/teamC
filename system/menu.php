@@ -1,5 +1,4 @@
 <div class="menu">
-    <link rel="stylesheet" href="css/menu.css">
 
     <a href="top.php" class="example">
         <img src="image/system/rogo.png" alt="image" width="100">
@@ -13,10 +12,10 @@
     </span>
 
     <span class="button">
-        <a href="login.php" class="example">
+        <a href="login.php">
             <img width="70" src="image/system/rogin.png" alt="ログイン">
         </a>
-        <a href="cart-show.php" class="example">
+        <a href="cart-show.php">
             <img width="70" src="image/system/cart.png" alt="カート">
         </a>
     </span>
