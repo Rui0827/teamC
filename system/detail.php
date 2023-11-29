@@ -1,7 +1,7 @@
 <?php session_start(); ?>
+<?php $css = 'detail.css'; ?>
 <?php require 'header.php'; ?>
 <?php require 'menu.php'; ?>
-<?php $css = 'detail.css'; ?>
 <?php require 'db-connect.php'; ?>
 <link rel="stylesheet" href="css/detail.css">
 
