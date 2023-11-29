@@ -34,24 +34,28 @@
     </head>
     <body>
         
-<form action="login.php" method="post" name="a" >
-    <h1>ログイン</h1>
-    ログイン名<input type="text" name="login"><br>
-    パスワード<input type="password" name="password"><br>
+<form action="login.php" method="post" name="a" class="form" >
+<div class="form-wrapper">
+
+  <h1>ログイン</h1>
+  <form>
+    <div class="form-item">
+      <label for="login-name"></label>
+      <input type="text" name="login" required="required" placeholder="ログイン名"></input>
+    </div>
+    <div class="form-item">
+      <label for="password"></label>
+      <input type="password" name="password" required="required" placeholder="パスワード"></input>
+    </div>
+    <div class="button-panel">
+      <input type="submit" class="button" name="send" value="ログイン"></input>
+    </div>
     <p><?= $msg ?></p>
-    <input type ="submit" name="send" value="ログイン">
-</form>
-    <form action="usertoroku.php" method="post">
-        <input type ="submit" name="toroku" value="新規登録">
-    </form>
-    <form action="kosin-input.php" method="post">
-        <input type ="submit" name="kosin" value="更新">
-    </form>
-    <form action="top.php" method="post">
-        <input type ="submit" name="modoru" value="戻る">
-    </form>
-    <form action="logout.php" method="post">
-        <input type ="submit" name="logout" value="ログアウト">
-    </form>
-    </body>
+  </form>
+
+  <div class="form-footer">
+    <p><a href="usertoroku.php">新規登録</a>　<a href="kosin-input.php">更新</a></p>
+    <p><a href="password.php">パスワードを忘れた方はこちらへ→</a>
+  </div>
+</div>
 </html>

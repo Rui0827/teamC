@@ -1,6 +1,10 @@
 <?php require 'db-connect.php'; ?>
 <?php
 $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
+$pdo = new PDO($connect, USER, PASS);
+$sql = $pdo->prepare('select * from WHERE shohin_id=?'); // ここを更新しました
+$sql->execute([$_GET['id']]);// ここを更新しました
+$row = $sql->fetch();
 ?>
 
 <!DOCTYPE html>
@@ -16,24 +20,24 @@ $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
     <h1>商品更新</h1>
     <hr>
     <form action="" method="post">
-        更新する商品名:<input type="text" name="shohin_name_update"><br>
-        更新する商品価格:<input type="text" name="price_update"><br>
-        更新する商品画像パス:<input type="text" name="photo_update"><br>
+        更新する商品名:<input type="text" name="shohin_name" value="<?= $row['shohin_name'] ?>"><br>
+        更新する商品価格:<input type="text" name="price" value="<?= $row['price'] ?>"><br>
+        更新する商品画像パス:<input type="text" name="photo" value="<?= $row['photo'] ?>"><br>
         更新するジャンル:<select id="product_category" name="product_category" required>
             <option value="" disabled selected>ジャンルを選択してください</option>
-            <option value="dog">犬用品</option>
-            <option value="cat">猫用品</option>
-            <option value="hatu">爬虫類</option>
-            <option value="fish">魚用品</option>
-            <option value="tori">鳥用品</option>
-            <option value="syou">小動物用品</option>
-            <option value="bug">昆虫用品</option>
+            <option value="1">犬用品</option>
+            <option value="2">猫用品</option>
+            <option value="3">爬虫類</option>
+            <option value="4">魚用品</option>
+            <option value="5">鳥用品</option>
+            <option value="6">小動物用品</option>
+            <option value="7">昆虫用品</option>
         </select><br>
-        更新する商品詳細:<input type="text" name="details_update"><br>
+        更新する商品詳細:<textarea name="details" id="" cols="30" rows="10"></textarea><br>
         <button type="submit">更新</button>
     </form>
     <?php
-    $pdo = new PDO($connect, USER, PASS);
+    
  
     if (!empty($_POST['shohin_name_update']) && !empty($_POST['price_update'])) {
         $product_name_update = $_POST['shohin_name_update'];
@@ -84,7 +88,7 @@ $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
         }
         ?>
     </table>
-    <a href="kanrisya_itiran.php">商品一覧へ戻る</a>
+    <a href=" kanrisya_itiran.php">商品一覧へ戻る</a>
 </body>
 
 </html>
