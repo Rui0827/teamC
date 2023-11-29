@@ -21,11 +21,11 @@ if (!empty($_SESSION['Shohin'])) {
     echo '</table>';
 } else {
     echo 'カートに商品がありません。';
-    echo '<form action="top.php" method="post">';
-    echo '<input type="submit" value="戻る">';
-    echo '</form>';
 }
 ?>
-<form action="purchase-input.php" method="post">
-    <input type="submit" value="購入する">
+<form action="purchase-input.php" method="post" class="form-buttons">
+    <input type="submit" value="購入する" class="buttonA">
+</form>
+<form action="top.php" method="post" class="form-buttons">
+    <input type="submit" value="戻る" class="buttonB">
 </form>

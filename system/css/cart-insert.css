@@ -5,7 +5,7 @@ p {
   margin-top: 20px;
 }
 
-
+/* カート内の表のスタイル */
 .cart-table {
   width: 100%;
   border-collapse: collapse;
@@ -14,7 +14,7 @@ p {
 
 .cart-table th,
 .cart-table td {
-  border: 1px solid #000000; 
+  border: 1px solid #000000; /* 黒色の境界線 */
   padding: 8px;
   text-align: left;
 }
@@ -23,15 +23,24 @@ p {
   background-color: #ffffff;
 }
 
-
-form {
+.form-buttons {
   text-align: center;
   margin-top: 20px;
 }
 
-input[type="submit"] {
+.buttonA {
   padding: 10px 20px;
   background-color: #03d638;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.buttonB {
+  padding: 10px 20px;
+  background-color: #36d1f4;
   color: rgb(0, 0, 0);
   border: none;
   cursor: pointer;
