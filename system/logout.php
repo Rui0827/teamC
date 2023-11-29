@@ -3,14 +3,17 @@
 <?php
 if (isset($_SESSION['Customer'])) {
     unset($_SESSION['Customer']);
-    echo 'ログアウトしました。';
+    $msg = 'ログアウトしました。';
 }else{
-    echo 'すでにログアウトしています。';
+    $msg = 'すでにログアウトしています。';
 }
 ?>
-<form action="login.php" method="post">
-    <input type ="submit" name="modoru" value="戻る">
-</form>
-<form action="top.php" method="post">
-    <input type ="submit" name="top" value="トップへ戻る">
-</form>
+<link rel="stylesheet" href="css/logout.css">
+<body>
+<div class="form-wrapper">
+    <h2><?= $msg ?></h2>
+    <div class="form-footer">
+        <p><a href="top.php">トップへ戻る</a>
+    </div>
+</div>
+</body>
