@@ -1,51 +1,43 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/usertoroku.css">
-
     <title>ユーザー登録</title>
 </head>
 
 <body>
-    <?php
-    $account_name = $password = $address = $Email = '';
-    if (isset($_SESSION['Customer'])) {
-        $account_name = $_SESSION['Customer']['account_name'];
-        $password = $_SESSION['Customer']['password'];
-        $address = $_SESSION['Customer']['address'];
-        $Email = $_SESSION['Customer']['Email'];
-    }
-    echo '<header>';
-    echo '<h1>ユーザー登録</h1>';
-    echo '</header>';
+    <header>
+        <h1>ユーザー登録</h1>
+    </header>
 
-    echo '<p>アカウント名とパスワードを入力してください</p>';
-    echo '<div class="nyuryoku">';
-    echo '<form action="usertorokukakunin.php" method="post">';
-    echo '<input type="text" name="account_name" id="account_name" placeholder="アカウント名">';
-    echo '</br>';
-    echo '<input type="password" name="password" id="password" placeholder="パスワード">';
-    echo '</br>';
-    echo '<input type="text" name="address" id="address" placeholder="住所">';
-    echo '</br>';
-    echo '<input type="text" name="Email" id="Email" placeholder="メールアドレス">';
-    echo '</div>';
+    <p>アカウント名とパスワードを入力してください</p>
+    <div class="nyuryoku">
+        <form action="usertorokukakunin.php" method="post">
+            <input type="text" name="account_name" id="account_name" placeholder="アカウント名">
+            </br>
+            <input type="password" name="password" id="password" placeholder="パスワード">
+            </br>
+            <input type="text" name="address" id="address" placeholder="住所">
+            </br>
+            <input type="text" name="Email" id="Email" placeholder="メールアドレス">
+    </div>
+    </br>
 
-    echo '<div class="wrapper">';
-    echo '<div class="back">';
-    echo '<input type="button" id="Button" value="戻る">';
-    echo '</div>';
+    <div class="wrapper">
+        <div class="toroku">
+            <input type="submit" value="登録">
+        </div>
+        </form>
+        <form action="login.php" method="post">
+            <div class="back">
+                <input type="submit" value="戻る">
+            </div>
+        </form>
 
-    echo '<div class="toroku">';
-    echo '<input type="submit" value="登録">';
-    echo '</div>';
-    echo '</div>';
 
-    echo '</form>';
-    ?>
+    </div>
 </body>
 
 </html>

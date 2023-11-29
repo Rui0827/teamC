@@ -27,22 +27,32 @@ p{
 
 .back {
     text-align: center; /* 戻るボタンを左寄せに配置 */
-    padding: 40px 0;
 }
 
-.back input[type="button"] {
-    background-color: pink; /* 背景色をピンクに設定 */
-    color: black; /* ボタンのテキスト色を黒に設定 */
+.back input[type="submit"] {
+    background-color: red; /* 登録ボタンの色 */
+    border-radius:5px;
+    text-decoration: none;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    cursor:pointer;
+    color: white;
 }
 
 .toroku {
     text-align: right; /* 登録ボタンを右寄せに配置 */
-    padding: 40px 0;
 }
 
 .toroku input[type="submit"] {
-    background-color: rgb(112, 205, 50); /* ボタンの背景色をピンクに設定 */
-    color: black; /* ボタンのテキスト色を白に設定 */
+    background-color: #27ae60; /* 登録ボタンの色 */
+    border-radius:5px;
+    text-decoration: none;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    cursor:pointer;
+    color: white; /* ボタンのテキスト色を白に設定 */
 }
 
 
