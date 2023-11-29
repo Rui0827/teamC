@@ -29,7 +29,7 @@
         echo '<input type="hidden" name="price" value="', $row['price'], '">';
         echo '<input class="add-to-cart" type="submit" value="カートに追加">';
         echo '</form>';
-        echo '<form action="top.php" method="post">';
+        echo '<form action="product.php" method="post">';
         echo '<input type="submit" value="戻る">';
         echo '</form>';
         echo '</div>'; 

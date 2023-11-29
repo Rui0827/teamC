@@ -5,12 +5,13 @@ $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
- 
+
 <head>
     <meta charset="UTF-8">
     <title>管理者削除</title>
+    <link rel="stylesheet" href="css/kanrisya_delete.css">
 </head>
- 
+
 <body>
     <?php
         $pdo=new PDO($connect, USER, PASS);
@@ -25,8 +26,18 @@ $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
     <br>
     <hr><br>
     <table>
-            <tr><th>商品ID</th><th>商品名</th><th>価格</th><th>商品詳細</th><th>ジャンルID</th><th>写真リンク</th><th>登録日</th><th>更新日</th></tr>
-            
+        <tr>
+            <th>商品ID</th>
+            <th>商品名</th>
+            <th>価格</th>
+            <th>商品詳細</th>
+            <th>ジャンルID</th>
+            <th>写真リンク</th>
+            <th>ストック</th>
+            <th>登録日</th>
+            <th>更新日</th>
+        </tr>
+
         <?php
     $pdo=new PDO($connect, USER, PASS);
     foreach ($pdo->query('select * from Shohin') as $row) {
@@ -37,6 +48,7 @@ $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
         echo '<td>', $row['details'], '</td>';
         echo '<td>', $row['genre_id'], '</td>';
         echo '<td>', $row['photo'], '</td>';
+        echo '<td>', $row['stock'], '</td>';
         echo '<td>', $row['torokubi'], '</td>';
         echo '<td>', $row['koushinbi'], '</td>';
         echo '<td>';
@@ -51,5 +63,5 @@ $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
         <button type="submit">一覧画面へ戻る</button>
     </form>
 </body>
- 
+
 </html>
