@@ -1,26 +1,16 @@
-menu{
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #ffffff;
+menu {
+    width: 50%;
 }
 
-.kensaku{
-    display: inline-block;
+.top {
+    float: left;
+}
+
+.kensaku {
+    display: block;
     text-align: center;
 }
 
-.button{
-    display: inline-block;
-    text-align: right;
+.button {
+    float: right;
 }
-
-.kensaku-btn{
-    background-color:#87cefa;
-    border-radius:10px;
-    border:#87cefa 5px solid;
-    padding: 5 5 10 10;
-}
-
-a{
-    text-decoration: none;
-  }
