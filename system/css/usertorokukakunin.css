@@ -15,12 +15,6 @@ h1 {
     text-align: center;
 }
 
-p {
-    text-align: center; /* テキストを水平方向に中央配置 */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* コンテンツを垂直方向に中央配置 */
-}
 
 .wrapper {
     display: flex;
@@ -36,8 +30,14 @@ p {
 }
 
 .back input[type="submit"] {
-    background-color: pink; /* 背景色をピンクに設定 */
-    color: black; /* ボタンのテキスト色を黒に設定 */
+    background-color: red; /* 登録ボタンの色 */
+    border-radius:5px;
+    text-decoration: none;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    cursor:pointer;
+    color: white;
 }
 
 .kakutei {
@@ -46,8 +46,14 @@ p {
 }
 
 .kakutei input[type="submit"] {
-    background-color: rgb(112, 205, 50); /* ボタンの背景色をピンクに設定 */
-    color: black; /* ボタンのテキスト色を白に設定 */
+    background-color: #27ae60; /* 登録ボタンの色 */
+    border-radius:5px;
+    text-decoration: none;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    cursor:pointer;
+    color: white; /* ボタンのテキスト色を白に設定 */
 }
 
 .CustomerTable {
