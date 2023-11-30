@@ -2,7 +2,7 @@
 <?php
 $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
 $pdo = new PDO($connect, USER, PASS);
-$sql = $pdo->prepare('select * from WHERE shohin_id=?'); // ここを更新しました
+$sql = $pdo->prepare('select * from Shohin WHERE shohin_id=?'); // ここを更新しました
 $sql->execute([$_GET['id']]);// ここを更新しました
 $row = $sql->fetch();
 ?>
@@ -24,29 +24,40 @@ $row = $sql->fetch();
         更新する商品価格:<input type="text" name="price" value="<?= $row['price'] ?>"><br>
         更新する商品画像パス:<input type="text" name="photo" value="<?= $row['photo'] ?>"><br>
         更新するジャンル:<select id="product_category" name="product_category" required>
+            <?php        
+        $sql = $pdo->prepare('select * from Genre'); // ここを更新しました
+        $sql->execute();
+        $data = $sql->fetchAll();
+?>
+
             <option value="" disabled selected>ジャンルを選択してください</option>
-            <option value="1">犬用品</option>
-            <option value="2">猫用品</option>
-            <option value="3">爬虫類</option>
-            <option value="4">魚用品</option>
-            <option value="5">鳥用品</option>
-            <option value="6">小動物用品</option>
-            <option value="7">昆虫用品</option>
+            <?php
+foreach($data as $row1 ){
+    $select= "";
+    if($row1['genre_id'] == $row['genre_id']){
+        $select=" selected";
+    }
+    echo '<option value="',$row1['genre_id'],'" ',$select,'>',$row1['name'],'</option>';
+}
+?>
+
         </select><br>
-        更新する商品詳細:<textarea name="details" id="" cols="30" rows="10"></textarea><br>
+        更新する商品詳細:<textarea name="details" id="" cols="30" rows="10"><?= $row['details'] ?></textarea><br>
         <button type="submit">更新</button>
     </form>
+
     <?php
     
  
-    if (!empty($_POST['shohin_name_update']) && !empty($_POST['price_update'])) {
-        $product_name_update = $_POST['shohin_name_update'];
-        $price_update = $_POST['price_update'];
-        $product_picture_update = $_POST['photo_update']; 
+    if (!empty($_POST['shohin_name']) && !empty($_POST['price'])) {
+        $shohin_name = $_POST['shohin_name'];
+        $price = $_POST['price'];
+        $photo = $_POST['photo']; 
  
         $day = date("Y-m-d");
         $sql_update = $pdo->prepare('UPDATE Shohin SET shohin_name=?, price=?, photo=?, koushinbi=? WHERE shohin_id=?'); // ここを更新しました
-        if ($sql_update->execute([$shohin_name_update, $price_update, $photo_update, $torokubi, $_POST['shohin_id_update']])) { // ここを更新しました
+
+        if ($sql_update->execute([$shohin_name, $price, $photo, $day, $_POST['shohin_id']])) { // ここを更新しました
             echo '商品情報が更新されました。';
         } else {
             echo '商品情報の更新に失敗しました。';
