@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php';?>
-<link rel="stylesheet" href="css/kanrisya_login.css">
 <?php
 $msg = '';
 if(isset($_POST['send'])){
@@ -11,8 +10,8 @@ if(isset($_POST['send'])){
     $data = $sql->fetchAll();
     foreach ($data as $row) {
         if($_POST['password'] === $row['password']){
-        $_SESSION['Admin']=[
-            'admin_id'=>$row['admin_id'],
+            $_SESSION['Admin']=[
+                'admin_id'=>$row['admin_id'],
             'account_name'=>$row['account_name'],
             'password'=>$row['password'],];
         }
@@ -31,6 +30,7 @@ if(isset($_POST['send'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/kanrisya_login.css">
     <title>管理者ログイン</title>
 </head>
 <html lang="ja">
