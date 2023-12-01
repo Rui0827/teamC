@@ -5,4 +5,4 @@
 <?php require 'cart.php'; ?>
 <?php require 'footer.php'; ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $css; ?>">
-<link rel="stylesheet" type="text/css" href="cart.css">
+<link rel="stylesheet" type="text/css" href=".css">
