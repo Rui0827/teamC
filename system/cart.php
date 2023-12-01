@@ -1,3 +1,6 @@
+<link rel="stylesheet" type="text/css" href="<?php echo $css; ?>">
+<link rel="stylesheet" href="css/cart.css">
+
 <?php
 if (!empty($_SESSION['Shohin'])) {
     echo '<div class="cart-items">';
