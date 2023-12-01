@@ -29,7 +29,7 @@ foreach( $sql as $row ){
     $stock=$row['stock'];
     echo '<td class="product-cell">'; // 商品画像のセル
     echo '<a href="detail.php?id=', $id, '">', '<img src="image/products/', $id, '/top.jpg" width="200" height="200"></a>';
-    if($stock == 0){
+    if($stock <= 0){
         echo '<p>SOLD OUT</p>';
     }
     echo '</td>';
