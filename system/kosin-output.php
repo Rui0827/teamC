@@ -13,12 +13,12 @@ if (isset($_SESSION['Customer'])) {
 }
 if (empty($sql->fetchAll())) {
     if (isset($_SESSION['Customer'])) {
-        $sql=$pdo->prepare('update Customer set account_name=?,address=?, Email=? where customer_id=?');
+        $sql=$pdo->prepare('update Customer set account_name=?, password=?, address=?, Email=? where customer_id=?');
         $sql->execute ([
-            $_POST['name'], $_POST['address'],$_POST['Email'],$_SESSION['Customer']['customer_id']
+            $_POST['name'], password_hash($_POST['password'], PASSWORD_DEFAULT), $_POST['address'], $_POST['Email'], $_SESSION['Customer']['customer_id']
         ]);
         $_SESSION['Customer']=[
-            'customer_id'=>$id, 'account_name'=>$_POST['name'],
+            'customer_id'=>$id, 'account_name'=>$_POST['name'], 'password'=>password_hash($_POST['password'], PASSWORD_DEFAULT),
             'address'=>$_POST['address'], 'Email'=>$_POST['Email']];
         echo 'お客様情報を更新しました。';
     }else{

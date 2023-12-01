@@ -1,59 +1,96 @@
-@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
-header{
-    background-color: rgb(114, 203, 255);
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
 }
 
-h1 {
-    text-align: center;
-}
-
-
-p{
-    text-align: center;
+.nyuryoku header{
+    color: black;
 }
 
 .nyuryoku {
-    text-align: center;
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.nyuryoku input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.nyuryoku button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.nyuryoku button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+
+
+.nyuryoku .register-form {
+  display: none;
 }
 
 .wrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-}
-
-.back {
-    text-align: center; /* 戻るボタンを左寄せに配置 */
-}
-
-.back input[type="submit"] {
-    background-color: red; /* 登録ボタンの色 */
-    border-radius:5px;
-    text-decoration: none;
-    padding:10px;
-    margin-top:10px;
-    border:none;
-    cursor:pointer;
-    color: white;
-}
-
-.toroku {
-    text-align: right; /* 登録ボタンを右寄せに配置 */
+    justify-content: space-between;
+    margin-top: 15px;
 }
 
 .toroku input[type="submit"] {
-    background-color: #27ae60; /* 登録ボタンの色 */
-    border-radius:5px;
-    text-decoration: none;
-    padding:10px;
-    margin-top:10px;
-    border:none;
-    cursor:pointer;
-    color: white; /* ボタンのテキスト色を白に設定 */
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
 }
 
+.back input[type="submit"] {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
 
+.toroku input[type="submit"]:hover,
+.back input[type="submit"]:hover {
+    background-color: #218c53;
+}
 
+body {
+  background: #e9e9e9; /* fallback for old browsers */
+  color: #5e5e5e;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}

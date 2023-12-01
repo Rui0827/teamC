@@ -57,7 +57,7 @@ foreach($data as $row1 ){
         $day = date("Y-m-d");
         $sql_update = $pdo->prepare('UPDATE Shohin SET shohin_name=?, price=?, photo=?, koushinbi=? WHERE shohin_id=?'); // ここを更新しました
 
-        if ($sql_update->execute([$shohin_name, $price, $photo, $day, $_POST['shohin_id']])) { // ここを更新しました
+        if ($sql_update->execute([$shohin_name, $price, $photo, $day, $_GET['id']])) { // ここを更新しました
             echo '商品情報が更新されました。';
         } else {
             echo '商品情報の更新に失敗しました。';

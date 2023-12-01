@@ -2,7 +2,7 @@
 
 <?php
 $msg = '';
-$name = $address = $Email = '';
+$name = $password = $address = $Email = '';
 if (isset($_SESSION['Customer'])) {
     $name = $_SESSION['Customer']['account_name'];
     $address = $_SESSION['Customer']['address'];
@@ -19,6 +19,14 @@ if (isset($_SESSION['Customer'])) {
                 <tr>
                     <td>お名前</td>
                     <td><input type="text" name="name" value="<?= $name ?>"></td>
+                </tr>
+            </div>
+            <div class="password">
+                <tr>
+                    <td>パスワード</td>
+                    <td>
+                        <input type="text" name="password" value="<?= $password ?>">
+                    </td>
                 </tr>
             </div>
             <div class="address">
