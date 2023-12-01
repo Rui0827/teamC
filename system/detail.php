@@ -27,8 +27,15 @@
         echo '<input type="hidden" name="id" value="', $row['shohin_id'], '">';
         echo '<input type="hidden" name="name" value="', $row['shohin_name'], '">';
         echo '<input type="hidden" name="price" value="', $row['price'], '">';
-        echo '<input class="add-to-cart" type="submit" value="カートに追加">';
-        echo '</form>';
+
+        if ($row['stock'] <= 0){
+            echo '<input class="soldout" type="submit" value="SOLD OUT">';
+            echo '<br>';
+        }else{
+            echo '<input class="add-to-cart" type="submit" value="カートに追加">';
+            echo '</form>';
+        }
+
         echo '<form action="product.php" method="post">';
         echo '<input class="return-to-cart" type="submit" value="戻る">';
         echo '</form>';
