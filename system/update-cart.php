@@ -1,4 +1,5 @@
 <?php
+session_id($_POST['session_id']);
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id']) && isset($_POST['quantity'])) {
@@ -11,7 +12,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id']) && isset($_POST
         $_SESSION['Shohin'][$id]['count'] = $quantity; // 数量を更新
     }
 }
-
-header('Location: cart.php'); // カートページにリダイレクト
-exit;
-?>
