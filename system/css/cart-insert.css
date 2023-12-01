@@ -47,3 +47,32 @@ p {
   border-radius: 5px;
   font-size: 16px;
 }
+.product {
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+  text-align: center;
+}
+/* 合計金額を中央に配置するスタイル */
+.total-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.total-text {
+  font-size: 1.2em;
+  color: #333;
+}
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 300px;
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}

@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <div class="login-kanryo"></div>
     <header>
         <h1>ユーザー登録完了画面</h1>
     </header>
