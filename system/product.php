@@ -42,7 +42,7 @@ echo '</div>'; // コンテナ終了
 
 <br>
 <form action="top.php">
-    <input type="submit" value="戻る">
+    <input class="return-to-top" type="submit" value="戻る">
 </form>
 
 <?php require 'footer.php'; ?>
