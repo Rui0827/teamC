@@ -15,6 +15,7 @@
             echo '<td>', $Shohin['name'], '</td>';
             echo '<td>', $Shohin['price'], '</td>';
             echo '<td>', $Shohin['count'], '</td>';
+            $stock = $Shohin['count'];
             $subtotal= $Shohin['price'] * $Shohin['count'];
             $total += $subtotal;
             echo '<td>', $total, '</td>';
@@ -26,19 +27,19 @@
         echo '<tr><td>合計</td><td></td><td></td><td></td><td>', $total,
              '</td><td></td></tr>';
         echo '</table>';
+        echo '<br>';
+        echo '<form action="purchase-output.php" style="display: inline-block;">';
+        echo '<input type="submit" class="decision" value="注文を確定する">';
+        echo '</form>';
     
     }else{
         echo 'カートに商品がありません。';
     }
 ?>
     <br>
-    <br>
-    <form action="cart.php" style="display: inline-block;">
+    <form action="cart-show.php" style="display: inline-block;">
         <input type="submit" class="back" value="戻る">
     </form>
 
-    <form action="purchase-output.php" style="display: inline-block;">
-        <input type="submit" class="decision" value="注文を確定する">
-    </form>
 
 <?php require 'footer.php'; ?>
