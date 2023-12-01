@@ -1,38 +1,37 @@
 <?php
 if (!empty($_SESSION['Shohin'])) {
     echo '<div class="cart-items">';
-
-    // Flexbox コンテナを開始
-    echo '<div class="products-container">';
-
+    $totalAmount = 0; // カート内合計金額を格納する変数を初期化
     foreach ($_SESSION['Shohin'] as $id => $product) {
         echo '<div class="product">';
-        echo '<img src="product_images/' . $id . '.jpg" alt="' . $product['name'] . '">';
+        echo '<img alt="image" src="image/products/' . $id . '/top.jpg" width="200" height="200">';
         echo '<h3>' . $product['name'] . '</h3>';
         echo '<p>価格: ' . $product['price'] . '</p>';
-        // 数量を変更するフォームを追加
-        echo '<form action="update-cart.php" method="post">';
-        echo '<input type="hidden" name="id" value="' . $id . '">';
-        echo '<label for="quantity">数量:</label>';
-        echo '<input type="number" name="quantity" id="quantity" value="' . $product['count'] . '" min="1">';
-        echo '<input type="submit" value="更新">';
-        echo '</form>';
-        echo '<p>小計: ' . ($product['price'] * $product['count']) . '</p>';
+        echo '<p>個数: ' . $product['count'] . '</p>';
+        $subtotal = $product['price'] * $product['count']; // 小計を計算
+        echo '<p>小計: ' . $subtotal . '</p>';
+        $totalAmount += $subtotal; // カート内合計金額に小計を加算
+        
+        // 詳細ページへのリンク
+        echo '<a href="detail.php?id=' . $id . '">詳細ページへ</a>';
+        echo '<br>';
+        echo '<td class="product-info"><a href="cart-delete.php?id=', $id, '">削除</a></td>';
+
         echo '</div>';
     }
-
-    // Flexbox コンテナを終了
     echo '</div>';
 
+    // カート内全体の合計金額を表示
+    echo '<div class="total-amount">';
+    echo '<p>カート内合計金額: ' . $totalAmount . '</p>';
     echo '</div>';
+    echo '<form action="purchase-input.php" method="post" class="form-buttons">';
+    echo '<input type="submit" value="購入する" class="buttonA">';
+    echo '</form>';
 } else {
     echo 'カートに商品がありません。';
 }
 ?>
-
-
-
-
 <form action="top.php" method="post" class="form-buttons">
     <input type="submit" value="戻る" class="buttonB">
 </form>
