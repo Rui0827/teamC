@@ -1,61 +1,124 @@
-@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 header{
-    background-color: rgb(114, 203, 255);
+    color: black;
 }
-
-.text-center {
-    text-align: center; /* テキストを水平方向に中央配置 */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* コンテンツを垂直方向に中央配置 */
-}
-
-h1 {
+.login-kakunin {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
     text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+
+.CustomerTable {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+.nyuryoku-kakunin input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.nyuryoku-kakunin button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.nyuryoku-kakunin button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+
+
+.nyuryoku-kakunin .register-form {
+  display: none;
+}
 
 .wrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-}
-
-.back {
-    text-align: center; /* 戻るボタンを左寄せに配置 */
-    padding: 40px 0;
-}
-
-.back input[type="submit"] {
-    background-color: red; /* 登録ボタンの色 */
-    border-radius:5px;
-    text-decoration: none;
-    padding:10px;
-    margin-top:10px;
-    border:none;
-    cursor:pointer;
-    color: white;
-}
-
-.kakutei {
-    text-align: right; /* 登録ボタンを右寄せに配置 */
-    padding: 40px 0;
+    margin-top: 15px;
+    align-items: flex-end;
+    justify-content: space-around;
 }
 
 .kakutei input[type="submit"] {
-    background-color: #27ae60; /* 登録ボタンの色 */
-    border-radius:5px;
-    text-decoration: none;
-    padding:10px;
-    margin-top:10px;
-    border:none;
-    cursor:pointer;
-    color: white; /* ボタンのテキスト色を白に設定 */
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
 }
 
-.CustomerTable {
-    text-align: center;
+.back {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.back input[type="submit"] {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.kakutei input[type="submit"]:hover {
+    background-color: #1f894b;
+}
+
+.back input[type="submit"]:hover {
+    background-color: rgb(226, 0, 0);
+}
+
+body {
+    background: #e9e9e9; /* fallback for old browsers */
+    color: #5e5e5e;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;      
+  }
