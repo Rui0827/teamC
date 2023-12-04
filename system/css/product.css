@@ -47,7 +47,20 @@
     border-radius: 5px;
     font-size: 16px;
   }
-
+  .return-to-top{
+    border: 2px solid black;
+    padding: 8px 16px;
+    background-color: #af634c;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    
+  }
+  .return-to-top:hover{
+    background-color:#af634c;
+  }
   
   
   
