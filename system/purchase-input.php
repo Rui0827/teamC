@@ -40,10 +40,11 @@ if (isset($_SESSION['Customer'])) {
     echo 'ログインしてください。';
 }
 ?>
-    <br>
+<br>
+<div class="back">
     <form action="cart-show.php" style="display: inline-block;">
         <input type="submit" class="back" value="戻る">
     </form>
-
+</div>
 
 <?php require 'footer.php'; ?>
