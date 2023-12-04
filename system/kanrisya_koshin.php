@@ -54,7 +54,7 @@ foreach($data as $row1 ){
         $shohin_name = $_POST['shohin_name'];
         $price = $_POST['price'];
         $photo = $_POST['photo']; 
-        $photo = $_POST['stock']; 
+        $stock = $_POST['stock']; 
  
         $day = date("Y-m-d");
         $sql_update = $pdo->prepare('UPDATE Shohin SET shohin_name=?, price=?, photo=?,stock=?, koushinbi=? WHERE shohin_id=?'); // ここを更新しました
