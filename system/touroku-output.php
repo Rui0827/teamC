@@ -5,9 +5,11 @@
     <head>
         <meta charset="UTF-8">
         <title>商品登録</title>
+        <link rel="stylesheet" href="css/touroku-output.css">
     </head>
     <body>
     <button onclick="location.href='kanrisya_itiran.php'">トップへ戻る</button>
+    <br>
 <?php
     if (is_uploaded_file($_FILES['photo']['tmp_name'])) {
 
@@ -31,7 +33,7 @@
         
         if (move_uploaded_file($_FILES['photo']['tmp_name'], $file,)) {
             echo $file, 'のアップロードに成功しました';
-            echo '<p><img alt="image/products" src="', $file, '" width="500" height="500"></p>';
+            echo '<p><img alt="image/products" src="', $file, '" width="400" height="400"></p>';
         }else{
             echo 'アップロードに成功しました';
         }                                               
