@@ -5,3 +5,19 @@ body{
 table{
     margin: auto;
 }
+
+.back input[type="submit"] {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+
+.back input[type="submit"]:hover {
+    background-color: #d50000;
+}
