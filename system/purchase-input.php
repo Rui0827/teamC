@@ -11,6 +11,7 @@ if (isset($_SESSION['Customer'])) {
         $total=0;
 
         foreach( $_SESSION['Shohin'] as $shohin_id=>$Shohin ){
+
             echo '<tr>';
             echo '<td>', $shohin_id, '</td>';
             echo '<td>', $Shohin['name'], '</td>';
@@ -19,9 +20,10 @@ if (isset($_SESSION['Customer'])) {
             $stock = $Shohin['count'];
             $subtotal= $Shohin['price'] * $Shohin['count'];
             $total += $subtotal;
-            echo '<td>', $total, '</td>';
+            echo '<td>', $subtotal, '</td>';
             echo '</tr>';
             echo '<br>';
+            
         }
         
         echo '<br>';
