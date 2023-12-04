@@ -55,11 +55,14 @@ foreach($data as $row1 ){
         $price = $_POST['price'];
         $photo = $_POST['photo']; 
         $stock = $_POST['stock']; 
+        $genre = $_POST['genre'];
+        $details = $_POST['details']; 
+        
  
         $day = date("Y-m-d");
-        $sql_update = $pdo->prepare('UPDATE Shohin SET shohin_name=?, price=?, photo=?,stock=?, koushinbi=? WHERE shohin_id=?'); // ここを更新しました
+        $sql_update = $pdo->prepare('UPDATE Shohin SET shohin_name=?, price=?, photo=?,stock=?, details=?,koushinbi=? WHERE shohin_id=?'); // ここを更新しました
 
-        if ($sql_update->execute([$shohin_name, $price, $photo, $stock,$day, $_GET['id']])) { // ここを更新しました
+        if ($sql_update->execute([$shohin_name, $price, $photo, $stock,$details,$day, $_GET['id']])) { // ここを更新しました
             echo '商品情報が更新されました。';
         } else {
             echo '商品情報の更新に失敗しました。';
