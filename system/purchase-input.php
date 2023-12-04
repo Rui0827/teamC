@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="css/purchase.css">
 
 <?php
+if (isset($_SESSION['Customer'])) {
     if( !empty($_SESSION['Shohin']) ){
         echo '<table>';
         echo '<tr><th>商品番号</th><th>商品名</th><th>価格</th><th>個数</th><th>小計</th><th></th></tr>';
@@ -25,7 +26,7 @@
         
         echo '<br>';
         echo '<tr><td>合計</td><td></td><td></td><td></td><td>', $total,
-             '</td><td></td></tr>';
+             '円</td><td></td></tr>';
         echo '</table>';
         echo '<br>';
         echo '<form action="purchase-output.php" style="display: inline-block;">';
@@ -35,11 +36,15 @@
     }else{
         echo 'カートに商品がありません。';
     }
+}else{
+    echo 'ログインしてください。';
+}
 ?>
-    <br>
+<br>
+<div class="back">
     <form action="cart-show.php" style="display: inline-block;">
         <input type="submit" class="back" value="戻る">
     </form>
-
+</div>
 
 <?php require 'footer.php'; ?>
