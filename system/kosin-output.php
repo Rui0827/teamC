@@ -22,7 +22,7 @@ if (empty($sql->fetchAll())) {
             'address'=>$_POST['address'], 'Email'=>$_POST['Email']];
         echo 'お客様情報を更新しました。';
     }else{
-        echo 'お客様情報を更新できませんでした。';
+        echo 'お客様情報を更新できませんでした。ログインしているか確認してください';
     }
 }else{
     echo 'ログイン名が他の人と被っています、他のログイン名に変えてください。';
