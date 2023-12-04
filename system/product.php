@@ -10,14 +10,18 @@ require 'db-connect.php';
 
 <ul class="product">
     <?php
+      $page = $_GET['id'];
       $pdo = new PDO($connect, USER, PASS);
-      $sql = $pdo->query('SELECT * FROM Shohin');
-
+      $sql = $pdo->prepare('SELECT * FROM Shohin where genre_id = ? ');
+      $sql -> execute([$page]);
+      
       foreach ($sql as $row) {
         $id = $row['shohin_id'];
+        $name =$row['shohin_name'];
         $stock = $row['stock'];
         echo '<li class="product-cell">';
         echo '<a href="detail.php?id=', $id, '">', '<img src="image/products/', $id, '/top.jpg" width="200" height="200"></a>';
+        echo '<div>' ,$name, '</div>';
         if ($stock <= 0) {
           echo '<p>SOLD OUT</p>';
         }
