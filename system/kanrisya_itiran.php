@@ -62,7 +62,7 @@
     <br>
 
     <div class="rui">
-        <form action="kanrisya_login.php" method="post">
+        <form action="kanrisya_logout.php" method="post">
             <div class="logout">
                 <input type="submit" value="ログアウト">
             </div>

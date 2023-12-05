@@ -1,4 +1,6 @@
 <?php session_start(); ?>
+<?php require 'menu.php'; ?>
+<?php require 'menu2.php'; ?>
 <!DOCTYPE html>
 <html lang="ja">
 
