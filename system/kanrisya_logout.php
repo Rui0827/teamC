@@ -6,7 +6,7 @@
 <?php
 if (isset($_SESSION['Admin'])) {
     unset($_SESSION['Admin']);
-    echo 'ログアウトしました。';
+    echo 'ログアウトしました。<br>';
     echo '<a href="kanrisya_login.php">ログイン画面へ</a>';
 } else {
     echo 'すでにログアウトしています。';
