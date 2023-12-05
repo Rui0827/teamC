@@ -26,7 +26,7 @@ if (!empty($_SESSION['Shohin'])) {
 
     // カート内全体の合計金額を表示
     echo '<div class="total-amount">';
-    echo '<p>カート内合計金額: ' . $totalAmount . '</p>';
+    echo '<p>カート内合計金額: ' . $totalAmount . '円</p>';
     echo '</div>';
     echo '<form action="purchase-input.php" method="post" class="form-buttons">';
     echo '<input type="submit" value="購入する" class="buttonA">';
