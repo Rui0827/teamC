@@ -23,7 +23,8 @@ $row = $sql->fetch();
         更新する商品名:<input type="text" name="shohin_name" value="<?= $row['shohin_name'] ?>"><br>
         更新する商品価格:<input type="text" name="price" value="<?= $row['price'] ?>"><br>
         更新する商品画像パス:<input type="text" name="photo" value="<?= $row['photo'] ?>"><br>
-        更新するジャンル:<select id="product_category" name="product_category" required>
+        更新するストック数:<input type="text" name="stock" value="<?= $row['stock'] ?>"><br>
+        更新するジャンル:<select id="product_category" name="genre" required>
             <?php        
         $sql = $pdo->prepare('select * from Genre'); // ここを更新しました
         $sql->execute();
@@ -53,11 +54,15 @@ foreach($data as $row1 ){
         $shohin_name = $_POST['shohin_name'];
         $price = $_POST['price'];
         $photo = $_POST['photo']; 
+        $stock = $_POST['stock']; 
+        $genre = $_POST['genre'];
+        $details = $_POST['details']; 
+        
  
         $day = date("Y-m-d");
-        $sql_update = $pdo->prepare('UPDATE Shohin SET shohin_name=?, price=?, photo=?, koushinbi=? WHERE shohin_id=?'); // ここを更新しました
+        $sql_update = $pdo->prepare('UPDATE Shohin SET shohin_name=?, price=?, photo=?, stock=?, genre_id=?, details=?,koushinbi=? WHERE shohin_id=?'); // ここを更新しました
 
-        if ($sql_update->execute([$shohin_name, $price, $photo, $day, $_GET['id']])) { // ここを更新しました
+        if ($sql_update->execute([$shohin_name, $price, $photo, $stock, $genre, $details, $day, $_GET['id']])) { // ここを更新しました
             echo '商品情報が更新されました。';
         } else {
             echo '商品情報の更新に失敗しました。';
