@@ -10,7 +10,7 @@ foreach ($_SESSION['Shohin'] as $shohin_id => $Shohin) {
     $data = $sql->fetch();
     $stock = $data['stock'];
     $name = $data['shohin_name'];
-    if ($stock <= 0) {
+    if ($stock < 0) {
         echo '以下の商品は在庫がないため、購入できませんでした<br>';
         echo $name, '<br>';
         echo '<br>';
