@@ -24,3 +24,12 @@ menu{
 a{
     text-decoration: none;
   }
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a,
+.menu form {
+    margin-right: 10px; 
+}
