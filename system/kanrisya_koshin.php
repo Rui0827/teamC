@@ -21,9 +21,9 @@ $row = $sql->fetch();
     <hr>
     <form action="" method="post">
         更新する商品名:<input type="text" name="shohin_name" value="<?= $row['shohin_name'] ?>"><br>
-        更新する商品価格:<input type="text" name="price" value="<?= $row['price'] ?>"><br>
+        更新する商品価格:<input type="number" name="price" min="0" value="<?= $row['price'] ?>"><br>
         更新する商品画像パス:<input type="text" name="photo" value="<?= $row['photo'] ?>"><br>
-        更新するストック数:<input type="text" name="stock" value="<?= $row['stock'] ?>"><br>
+        更新するストック数:<input type="number" name="stock" min="0" value="<?= $row['stock'] ?>"><br>
         更新するジャンル:<select id="product_category" name="genre" required>
             <?php        
         $sql = $pdo->prepare('select * from Genre'); // ここを更新しました
