@@ -1,6 +1,10 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php';?>
 <?php
+if (!isset($_SESSION['Admin'])) {
+    header("Location: kanrisya_login.php");
+    exit;
+}
 $msg = '';
 if(isset($_POST['send'])){
     unset($_SESSION['Admin']);
