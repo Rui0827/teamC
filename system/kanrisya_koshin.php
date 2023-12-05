@@ -104,7 +104,9 @@ foreach($data as $row1 ){
         }
         ?>
     </table>
-    <a href=" kanrisya_itiran.php">商品一覧へ戻る</a>
+    <form action="kanrisya_itiran.php" method="post">
+        <button type="submit">一覧画面へ戻る</button>
+    </form>
 </body>
 
 </html>
