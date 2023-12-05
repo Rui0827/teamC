@@ -29,7 +29,7 @@
         echo '<input type="hidden" name="price" value="', $row['price'], '">';
 
         if ($row['stock'] <= 0){
-            echo '<input class="soldout" type="submit" value="SOLD OUT">';
+            echo '<button disabled>SOLD OUT</button>';
             echo '<br>';
         }else{
             echo '<input class="add-to-cart" type="submit" value="カートに追加">';
