@@ -2,6 +2,7 @@
 <?php $css = 'cart-insert.css'; ?>
 <?php require 'header.php'; ?>
 <?php require 'menu.php'; ?>
+<?php require 'menu2.php'; ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $css; ?>">
 <link rel="stylesheet" type="text/css" href="style.css">
 <?php
