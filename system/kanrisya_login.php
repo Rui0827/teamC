@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php';?>
 <?php
+
 $msg = '';
 if(isset($_POST['send'])){
     unset($_SESSION['Admin']);

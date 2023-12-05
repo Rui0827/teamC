@@ -33,11 +33,11 @@
             echo '<br>';
         }else{
             echo '<input class="add-to-cart" type="submit" value="カートに追加">';
-            echo '</form>';
         }
+        echo '</form>';
 
         echo '<form action="product.php" method="post">';
-        echo '<input class="return-to-cart" type="submit" value="戻る">';
+        echo '<input class="return-to-cart" type="button" value="戻る" onClick="history.back()">';
         echo '</form>';
         echo '</div>'; 
 
