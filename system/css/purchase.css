@@ -2,6 +2,55 @@ body{
     text-align: center;
 }
 
-table{
+.sample {
     margin: auto;
+    /* display: block; */
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 100%;
+    overflow: auto;
+    width: auto;
+}
+    
+    th {
+      background-color: rgb(112, 196, 105);
+      color: white;
+      font-weight: normal;
+      padding: 20px 30px;
+      text-align: center;
+    }
+    td {
+      background-color: rgb(241 241 241);
+      color: rgb(0 0 0);
+      padding: 20px 30px;
+    }
+
+.kakutei input[type="submit"] {
+    background-color: rgb(48, 207, 48);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.kakutei input[type="submit"]:hover {
+    background-color: rgb(42, 190, 42);
+}
+
+.back input[type="submit"] {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.back input[type="submit"]:hover {
+    background-color: #d50000;
 }
