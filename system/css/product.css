@@ -1,66 +1,74 @@
+/* product.css */
+/* 変更された product.css */
 
-.product-container {
+.container {
   display: flex;
-  flex-wrap: wrap; /* 折り返す */
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-
-.product-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.product-table img {
-  max-width: 200px;
-  height: auto;
-}
+/* 
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+} */
 
 .product-cell {
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
-  flex: 0 0 calc(25% - 20px); /* 25%の幅、20pxの余白 */
-  max-width: calc(25% - 20px); /* 25%の幅、20pxの余白 */
 }
 
 @media (max-width: 800px) {
-  .product-cell {
-    flex: 0 0 calc(50% - 20px); /* 50%の幅、20pxの余白 */
-    max-width: calc(50% - 20px); /* 50%の幅、20pxの余白 */
+  .container {
+    flex-direction: column; /* 800px以下の場合は縦に並べる */
+  }
+  .product-container {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
   }
 }
 
-  p {
-    color: red;
-  }
-  
-  form {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #adff2f;
-    color: black;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  .return-to-top{
-    border: 2px solid black;
-    padding: 8px 16px;
-    background-color: #af634c;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    
-  }
-  .return-to-top:hover{
-    background-color:#af634c;
-  }
-  
-  
-  
+
+/* 以下は以前のスタイルが含まれる部分 */
+/* .cart-table, .form-buttons, .buttonA, .buttonB, .total-section, .total-text など他のスタイルもここに含まれる */
+
+p {
+  color: red;
+}
+
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #adff2f;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.return-to-top {
+  border: 2px solid black;
+  padding: 8px 16px;
+  background-color: #af634c;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.return-to-top:hover {
+  background-color: #af634c;
+}
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
