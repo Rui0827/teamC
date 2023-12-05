@@ -1,4 +1,7 @@
 <?php session_start(); ?>
+<?php $css = 'cart-insert.css'; ?>
+<?php require 'menu.php'; ?>
+<?php require 'menu2.php'; ?>
 <!DOCTYPE html>
 <html lang="ja">
 
