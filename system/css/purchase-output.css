@@ -1,0 +1,22 @@
+.top input[type="submit"] {
+    background-color: rgb(35, 239, 35);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.top input[type="submit"]:hover {
+    background-color:rgb(28, 197, 28);
+}
+
+p {
+    text-align: center;
+}
+
+.text {
+    text-align: center;
+}
