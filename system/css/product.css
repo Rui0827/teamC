@@ -1,17 +1,9 @@
-/* product.css */
-/* 変更された product.css */
 
 .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-/* 
-.product-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
-} */
 
 .product-cell {
   text-align: center;
@@ -28,10 +20,6 @@
   }
 }
 
-
-/* 以下は以前のスタイルが含まれる部分 */
-/* .cart-table, .form-buttons, .buttonA, .buttonB, .total-section, .total-text など他のスタイルもここに含まれる */
-
 p {
   color: red;
 }
@@ -43,7 +31,6 @@ form {
 
 input[type="submit"] {
   padding: 10px 20px;
-  background-color: #adff2f;
   color: black;
   border: none;
   cursor: pointer;
@@ -66,7 +53,7 @@ input[type="submit"] {
   background-color: #af634c;
 }
 
-.product {
+.productt {
   display: flex;
   flex-wrap: wrap;
   list-style: none;

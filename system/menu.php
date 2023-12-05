@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 <div class="menu">
     <span class="top">
         <a href="top.php">
@@ -23,8 +24,8 @@ if ($userLoggedIn) {
     echo '<a href="cart-show.php">';
     echo '<img width="70" src="image/system/cart.png" alt="カート">';
     echo '</a>';
-    echo '<form action="touroku-input.php" method="post">';
-    echo '<button type="submit">更新</button>';
+    echo '<form action="kosin-input.php" method="post">';
+    echo ' <button class="button is-danger" type="submit">更新</button>';
     echo '</form>';
 } else {
     echo '<a href="login.php">';
@@ -33,8 +34,8 @@ if ($userLoggedIn) {
     echo '<a href="cart-show.php">';
     echo '<img width="70" src="image/system/cart.png" alt="カート">';
     echo '</a>';
-    echo '<form action="touroku-input.php" method="post">';
-    echo '<button type="submit">新規登録</button>';
+    echo '<form action="usertoroku.php" method="post">';
+    echo '<button class="button is-danger" type="submit">新規登録</button>';
     echo '</form>';
 }
 echo '</div>';

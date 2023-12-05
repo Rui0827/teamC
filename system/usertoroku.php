@@ -27,7 +27,7 @@
                         <input type="submit" value="登録">
                     </div>
             </form>
-            <form action="login.php" method="post">
+            <form action="top.php" method="post">
                 <div class="back">
                     <input type="submit" value="戻る">
                 </div>
