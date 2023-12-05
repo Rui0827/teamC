@@ -22,7 +22,7 @@ $row = $sql->fetch();
     <form action="" method="post">
         更新する商品名:<input type="text" name="shohin_name" value="<?= $row['shohin_name'] ?>"><br>
         更新する商品価格:<input type="number" name="price" min="0" value="<?= $row['price'] ?>"><br>
-        更新する商品画像パス:<input type="text" name="photo" value="<?= $row['photo'] ?>"><br>
+        更新する商品画像パス:<input type="file" id="photo" name="photo" required accept="/system/image/*" value="<?= $row['photo'] ?>"><br>
         更新するストック数:<input type="number" name="stock" min="0" value="<?= $row['stock'] ?>"><br>
         更新するジャンル:<select id="product_category" name="genre" required>
             <?php        
