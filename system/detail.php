@@ -29,18 +29,21 @@
         echo '<input type="hidden" name="price" value="', $row['price'], '">';
 
         if ($row['stock'] <= 0){
-            echo '<input class="soldout" type="submit" value="SOLD OUT" disabled>';
+            echo '<button disabled>SOLD OUT</button>';
             echo '<br>';
         }else{
             echo '<input class="add-to-cart" type="submit" value="カートに追加">';
-      
-        } 
+            echo '</form>';
+        }
+
+        echo '<form action="product.php" method="post">';
+        echo '<input class="return-to-cart" type="submit" value="戻る">';
+        echo '</form>';
+        echo '</div>'; 
+
+        echo '</div>'; 
     }
     ?>
-        </form>
-      <button onclick="history.back()">戻る</button>
-        </div>      
-        </div>
 </div>
 
 <?php require 'footer.php'; ?>
