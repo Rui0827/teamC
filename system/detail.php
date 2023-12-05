@@ -2,9 +2,10 @@
 <?php $css = 'detail.css'; ?>
 <?php require 'header.php'; ?>
 <?php require 'menu.php'; ?>
+<?php require 'menu2.php'; ?>
 <?php require 'db-connect.php'; ?>
-<link rel="stylesheet" href="css/detail.css">
 
+<div class="all">
 <div class="container">
     <?php
     $pdo = new PDO($connect, USER, PASS);
@@ -44,6 +45,7 @@
         echo '</div>'; 
     }
     ?>
+</div>
 </div>
 
 <?php require 'footer.php'; ?>
