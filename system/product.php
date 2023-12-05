@@ -14,6 +14,13 @@ require 'db-connect.php';
       $pdo = new PDO($connect, USER, PASS);
       $sql = $pdo->prepare('SELECT * FROM Shohin where genre_id = ? ');
       $sql -> execute([$page]);
+
+      if( isset($_POST['keyword']) ){
+        $sql=$pdo->prepare('select * from product where name like ?');
+        $sql->execute(['%'.$_POST['keyword'].'%']);
+      }else{
+        $sql=$pdo->query('select * from product');
+      }
       
       foreach ($sql as $row) {
         $id = $row['shohin_id'];
