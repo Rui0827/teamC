@@ -36,6 +36,11 @@
         }
         echo '</form>';
 
+        $page = $_GET['id'];
+        $pdo = new PDO($connect, USER, PASS);
+        $sql = $pdo->prepare('SELECT * FROM Shohin where genre_id = ? ');
+        $sql -> execute([$page]);
+
         echo '<form action="product.php" method="post">';
         echo '<input class="return-to-cart" type="submit" value="戻る">';
         echo '</form>';
