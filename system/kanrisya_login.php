@@ -6,16 +6,14 @@ $msg = '';
 if(isset($_POST['send'])){
     unset($_SESSION['Admin']);
     $pdo=new PDO($connect,USER,PASS);
-    $sql=$pdo->prepare('select * from Admin where account_name=?');
-    $sql->execute([$_POST['login']]);
+    $sql=$pdo->prepare('select * from Admin where account_name=? and password=?');
+    $sql->execute([$_POST['login'],$_POST['password']]);
     $data = $sql->fetchAll();
     foreach ($data as $row) {
-        if($_POST['password'] === $row['password']){
-            $_SESSION['Admin']=[
-                'admin_id'=>$row['admin_id'],
-            'account_name'=>$row['account_name'],
-            'password'=>$row['password'],];
-        }
+        $_SESSION['Admin']=[
+            'admin_id'=>$row['admin_id'],
+        'account_name'=>$row['account_name'],
+        'password'=>$row['password'],];
     }
     if (isset($_SESSION['Admin'])){
         header("Location: kanrisya_itiran.php");
