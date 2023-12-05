@@ -30,11 +30,13 @@ if (!empty($_SESSION['Shohin'])) {
     echo '</div>';
     echo '<form action="purchase-input.php" method="post" class="form-buttons">';
     echo '<input type="submit" value="購入する" class="buttonA">';
-    echo '</form>';
 } else {
     echo 'カートに商品がありません。';
 }
 ?>
-<form action="top.php" method="post" class="form-buttons">
-    <input type="submit" value="戻る" class="buttonB">
-</form>
+
+    </form>
+<button onclick="history.back()">戻る</button>
+    </div>
+    </div>
+</div>
