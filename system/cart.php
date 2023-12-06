@@ -19,7 +19,6 @@ if (!empty($_SESSION['Shohin'])) {
         echo '<a href="detail.php?id=' . $id . '">詳細ページへ</a>';
         echo '<br>';
         echo '<td class="product-info"><a href="cart-delete.php?id=', $id, '">削除</a></td>';
-
         echo '</div>';
     }
     echo '</div>';
