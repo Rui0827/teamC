@@ -1,14 +1,13 @@
-  /* h1要素の背景色を青に設定 */
-  body {
+/* h1要素の背景色を青に設定 */
+body {
     text-align: center;
+    margin-top: 20px; /* ボディ要素と上の余白を追加 */
 }
 
 h1 {
     background-color: rgb(114, 203, 255);
-    color: brack;
-    /* テキストの色を白に設定して視認性を向上させます */
-    padding: 10px;
-    /* h1の周りに余白を追加します */
+    color: black; /* テキストの色を白に設定して視認性を向上させます */
+    padding: 10px; /* h1の周りに余白を追加します */
 }
 
 /* フォーム要素を中央揃え */
@@ -22,7 +21,6 @@ form {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 
 label {
     display: block;
@@ -40,13 +38,15 @@ input[type="password"] {
     box-sizing: border-box;
 }
 
-a{
+a {
     background-color: #7bed9f;
     color: #fff;
     padding: 12px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 20px; /* a要素と上の余白を追加 */
+    margin-bottom: 20px; /* a要素と下の余白を追加 */
 }
 
 a:hover {
