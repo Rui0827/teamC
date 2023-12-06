@@ -54,7 +54,7 @@ require 'db-connect.php';
 </ul>
 
 <form action="top.php">
-    <input class="return-to-top" type="submit" value="戻る">
+    <input class="button is-success" type="submit" value="戻る">
 </form>
 
 <?php require 'footer.php'; ?>

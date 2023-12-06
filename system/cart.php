@@ -1,21 +1,21 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $css; ?>">
 <link rel="stylesheet" href="css/cart.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 
 <?php
 if (!empty($_SESSION['Shohin'])) {
     echo '<div class="cart-items">';
-    $totalAmount = 0; // カート内合計金額を格納する変数を初期化
+    $totalAmount = 0; 
     foreach ($_SESSION['Shohin'] as $id => $product) {
         echo '<div class="product">';
         echo '<img alt="image" src="image/products/' . $id . '/top.jpg" width="200" height="200">';
         echo '<h3>' . $product['name'] . '</h3>';
         echo '<p>価格: ' . $product['price'] . '円</p>';
         echo '<p>個数: ' . $product['count'] . '個</p>';
-        $subtotal = $product['price'] * $product['count']; // 小計を計算
+        $subtotal = $product['price'] * $product['count']; 
         echo '<p>小計: ' . $subtotal . '円</p>';
-        $totalAmount += $subtotal; // カート内合計金額に小計を加算
+        $totalAmount += $subtotal; 
         
-        // 詳細ページへのリンク
         echo '<a href="detail.php?id=' . $id . '">詳細ページへ</a>';
         echo '<br>';
         echo '<td class="product-info"><a href="cart-delete.php?id=', $id, '">削除</a></td>';
@@ -24,19 +24,16 @@ if (!empty($_SESSION['Shohin'])) {
     }
     echo '</div>';
 
-    // カート内全体の合計金額を表示
-    echo '<div class="total-amount">';
-    echo '<p>カート内合計金額: ' . $totalAmount . '円</p>';
+    echo '<div class="total-amount box">';
+    echo '<p class="title is-4">カート内合計金額: ' . $totalAmount . '円</p>';
     echo '</div>';
+    echo '<div class="buttons is-flex is-justify-content-space-between">';
     echo '<form action="purchase-input.php" method="post" class="form-buttons">';
-    echo '<input type="submit" value="購入する" class="buttonA">';
+    echo '<input type="submit" value="購入する" class="button is-success">';
+    echo '</form>';
+    echo '<button onclick="history.back()" class="button is-info">戻る</button>';
+    echo '</div>';
 } else {
     echo 'カートに商品がありません。';
 }
 ?>
-
-    </form>
-<button onclick="history.back()">戻る</button>
-    </div>
-    </div>
-</div>

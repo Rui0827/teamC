@@ -55,7 +55,7 @@ if (isset($_SESSION['Customer'])) {
         </div>
 </form>
 <div class="modoru">
-    <form action="login.php" method="post">
+    <form action="top.php" method="post">
         <input type="submit" value="戻る">
     </form>
 </div>
@@ -66,5 +66,5 @@ if (isset($_SESSION['Customer'])) {
 </div>
 </div>
 <style>
-    <?php include "css/kosin.css" ?>
+<?php include "css/kosin.css"?>
 </style>

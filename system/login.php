@@ -54,7 +54,6 @@
   </form>
 
   <div class="form-footer">
-    <p><a href="usertoroku.php">新規登録</a>　<a href="kosin-input.php">更新</a></p>
     <p><a href="logout.php">ログアウト</a>
   </div>
 </div>
