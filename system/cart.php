@@ -32,9 +32,9 @@ if (!empty($_SESSION['Shohin'])) {
     echo '</form>';
     echo '</div>';
 } else {
-    echo '<p>カートに商品がありません。</p><br>';
+    echo 'カートに商品がありません。<br>';
 }
 
-    echo '<button onclick="history.back()" class="buttonC button is-info">戻る</button>';
+    echo '<button onclick="history.back()" class="button is-info">戻る</button>';
 
 ?>
