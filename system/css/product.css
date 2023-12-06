@@ -1,25 +1,4 @@
 
-.container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.product-cell {
-  text-align: center;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-@media (max-width: 800px) {
-  .container {
-    flex-direction: column; /* 800px以下の場合は縦に並べる */
-  }
-  .product-container {
-    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-  }
-}
-
 p {
   color: red;
 }
@@ -51,11 +30,5 @@ input[type="submit"] {
 
 .return-to-top:hover {
   background-color: #af634c;
-}
-
-.productt {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
 }
 
