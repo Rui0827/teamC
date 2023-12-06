@@ -23,17 +23,16 @@ foreach ($_SESSION['Shohin'] as $shohin_id => $Shohin) {
         echo $name, '<br>';
         echo '<br>';
     } else {
-
-
         $stock = $stock - $Shohin['count'];
         $sql = $pdo->prepare('update Shohin set stock=? where shohin_id=?');
         $sql->execute([$stock, $shohin_id]);
+        $_SESSION = array();
+        session_destroy();
+        echo '<div class="text">';
+        echo '<p>ご注文ありがとうございました</p>';
     }
 }
 ?>
-<div class="text">
-    <p>ご注文ありがとうございました</p>
-
     <div class="top">
         <form action="top.php" method="post">
             <input type="submit" name="top" value="トップへ戻る">
