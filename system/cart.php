@@ -19,7 +19,6 @@ if (!empty($_SESSION['Shohin'])) {
         echo '<a href="detail.php?id=' . $id . '">詳細ページへ</a>';
         echo '<br>';
         echo '<td class="product-info"><a href="cart-delete.php?id=', $id, '">削除</a></td>';
-
         echo '</div>';
     }
     echo '</div>';
@@ -33,9 +32,9 @@ if (!empty($_SESSION['Shohin'])) {
     echo '</form>';
     echo '</div>';
 } else {
-    echo 'カートに商品がありません。<br>';
+    echo '<p>カートに商品がありません。</p><br>';
 }
 
-    echo '<button onclick="history.back()" class="button is-info">戻る</button>';
+    echo '<button onclick="history.back()" class="buttonC button is-info">戻る</button>';
 
 ?>
