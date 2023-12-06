@@ -1,5 +1,13 @@
 <?php require 'db-connect.php'; ?>
 <?php
+    $connect = 'mysql:host='. SERVER . ';dbname='. DBNAME . ';charset=utf8';
+    if (!isset($_SESSION['Admin'])) {
+        echo '<a href="kanrisya_login.php">ログインしてください</a>';
+        exit;
+    }
+?>
+
+<?php
 $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
 $pdo = new PDO($connect, USER, PASS);
 $sql = $pdo->prepare('select * from Shohin WHERE shohin_id=?'); // ここを更新しました
@@ -22,7 +30,8 @@ $row = $sql->fetch();
     <form action="" method="post">
         更新する商品名:<input type="text" name="shohin_name" value="<?= $row['shohin_name'] ?>"><br>
         更新する商品価格:<input type="number" name="price" min="0" value="<?= $row['price'] ?>"><br>
-        更新する商品画像パス:<input type="file" id="photo" name="photo" required accept="/system/image/*" value="<?= $row['photo'] ?>"><br>
+        更新する商品画像パス:<input type="file" id="photo" name="photo" required accept="/system/image/*"
+            value="<?= $row['photo'] ?>"><br>
         <img src="<?= $file ?>" alt="">
         <input type="hidden" name="photo" value="<?= $file ?>">
         <br>
