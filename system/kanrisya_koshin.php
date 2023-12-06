@@ -14,6 +14,8 @@ $pdo = new PDO($connect, USER, PASS);
 $sql = $pdo->prepare('select * from Shohin WHERE shohin_id=?'); // ここを更新しました
 $sql->execute([$_GET['id']]);// ここを更新しました
 $row = $sql->fetch();
+$id = $_GET['id'];
+$file='image/products/'.$id.'/top.jpg';
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +30,7 @@ $row = $sql->fetch();
 <body>
     <h1>商品更新</h1>
     <hr>
+    <form action="" method="post" enctype="multipart/form-data">
     <form action="" method="post">
         更新する商品名:<input type="text" name="shohin_name" value="<?= $row['shohin_name'] ?>"><br>
         更新する商品価格:<input type="number" name="price" min="0" value="<?= $row['price'] ?>"><br>
@@ -61,8 +64,6 @@ foreach($data as $row1 ){
     </form>
 
     <?php
-    
- 
     if (!empty($_POST['shohin_name']) && !empty($_POST['price'])) {
         $shohin_name = $_POST['shohin_name'];
         $price = $_POST['price'];
@@ -71,7 +72,20 @@ foreach($data as $row1 ){
         $genre = $_POST['genre'];
         $details = $_POST['details']; 
         
- 
+        if (is_uploaded_file($_FILES['photo']['tmp_name'])) {
+            if (!file_exists('image/products/'.$id)) {
+                mkdir('image/products/'.$id);
+            }
+            
+            if (move_uploaded_file($_FILES['photo']['tmp_name'], $file,)) {
+                //echo $file, 'のアップロードに成功しました';
+                //echo '<p><img alt="image/products" src="', $file, '" width="400" height="400"></p>';
+            }else{
+                //echo 'アップロードに成功しました';
+            } 
+            $photo = $file;
+        }
+    
         $day = date("Y-m-d");
         $sql_update = $pdo->prepare('UPDATE Shohin SET shohin_name=?, price=?, photo=?, stock=?, genre_id=?, details=?,koushinbi=? WHERE shohin_id=?'); // ここを更新しました
 
