@@ -1,4 +1,13 @@
+<?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
+<?php
+    $connect = 'mysql:host='. SERVER . ';dbname='. DBNAME . ';charset=utf8';
+    if (!isset($_SESSION['Admin'])) {
+        echo '<a href="kanrisya_login.php">ログインしてください</a>';
+        exit;
+    }
+?>
+
 <?php
  
 $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=UTF8';
