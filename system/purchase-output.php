@@ -23,8 +23,6 @@ foreach ($_SESSION['Shohin'] as $shohin_id => $Shohin) {
         echo $name, '<br>';
         echo '<br>';
     } else {
-
-
         $stock = $stock - $Shohin['count'];
         $sql = $pdo->prepare('update Shohin set stock=? where shohin_id=?');
         $sql->execute([$stock, $shohin_id]);
