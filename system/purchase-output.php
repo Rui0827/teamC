@@ -6,7 +6,7 @@
 
 <?php
 $pdo = new PDO($connect, USER, PASS);
-
+$shohin=[];
 foreach ($_SESSION['Shohin'] as $shohin_id => $Shohin) {
     $sql = $pdo->prepare('select * from Shohin where shohin_id=?');
     $sql->execute([$shohin_id]);
@@ -28,11 +28,18 @@ foreach ($_SESSION['Shohin'] as $shohin_id => $Shohin) {
         $stock = $stock - $Shohin['count'];
         $sql = $pdo->prepare('update Shohin set stock=? where shohin_id=?');
         $sql->execute([$stock, $shohin_id]);
-        $_SESSION = array();
-        session_destroy();
-        echo '<div class="text">';
-        echo '<p>ご注文ありがとうございました</p>';
+        $shohin[] = $name;
     }
+}
+if(count($shohin)> 0){
+    echo '<div class="text">';
+    echo '<p>ご注文ありがとうございました。購入した商品は下記になります</p>';
+    foreach($shohin as $value){
+        echo $value, '<br>';
+        echo '<br>';
+    }
+    echo '</div>';
+    unset($_SESSION['Shohin']);
 }
 ?>
     <div class="top">
