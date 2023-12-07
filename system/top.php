@@ -28,11 +28,11 @@
     <?php require 'menu2.php'; ?>
 
     <div class="slider">
-        <img src="image/top/goods2.jpg" width="200" height="100" alt="">
-        <img src="image/top/cat2.jpg" width="200" height="100" alt="">
-        <img src="image/top/dog2.jpg" width="200" height="100" alt="">
-        <img src="image/top/cat3.jpg" width="200" height="100" alt="">
-        <img src="image/top/goods1.jpg" width="200" height="100" alt="">
+        <img src="image/top/goods2.jpg" width="500" height="400" alt="">
+        <img src="image/top/cat2.jpg" width="500" height="400" alt="">
+        <img src="image/top/dog2.jpg" width="500" height="400" alt="">
+        <img src="image/top/cat3.jpg" width="500" height="400" alt="">
+        <img src="image/top/goods1.jpg" width="500" height="400" alt="">
     </div>
 
     <?php require 'footer.php'; ?>
