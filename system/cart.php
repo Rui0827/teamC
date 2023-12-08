@@ -41,7 +41,9 @@ if (!empty($_SESSION['Shohin'])) {
     echo '<form action="purchase-input.php" method="post" class="form-buttons">';
     echo '<input type="submit" value="購入する" class="button is-success">';
     echo '</form>';
-    echo '<button onclick="history.back()" class="button is-info">戻る</button>';
+    echo '<form action="product.php" style="display: inline-block;">';
+    echo '<input type="submit" class="button is-info" value="商品一覧に戻る">';
+    echo'</form>';
     echo '</div>';
 } else {
     echo '<p>カートに商品がありません。</p>';

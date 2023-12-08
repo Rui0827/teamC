@@ -40,7 +40,7 @@
             echo '</form>';
 
             echo '<form action="product.php" method="post">';
-            echo '<input class="button is-info is-fullwidth mt-3" type="button" value="戻る" onClick="history.back()">';
+            echo '<input class="button is-info is-fullwidth mt-3" type="button" value="戻る" onClick="goBackToCart()">';
             echo '</form>';
             echo '</div>';
             echo '</div>';
@@ -51,5 +51,14 @@
         ?>
     </div>
 </div>
-
+<script>
+function goBackToCart() {
+    var referer = document.referrer;
+    if (referer.includes("cart-insert")) {
+        window.location.href = "cart-show.php"; // cart-insertの場合は別のページにリダイレクト
+    } else {
+        history.back(); // それ以外の場合は通常の戻る動作
+    }
+}
+</script>
 <?php require 'footer.php'; ?>
